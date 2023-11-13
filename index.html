@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tag yang Diperlukan -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+
+    <!-- Font dari Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <!-- material Icon -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    
+    <script src="https://kit.fontawesome.com/917733e7d4.js" crossorigin="anonymous"></script>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Stylesheet Eksternal -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Css Responsive -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Logo -->
+    <link rel="icon" href="assets/img/Logo.png" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Jasmine Furniture</title>
+    <!-- <link rel="canonical" href="#">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "CompanyProfile",
+        "headline": "Jasmine Furniture",
+        "datePublished": "2023-10-11T12:02:41Z",
+        "image": [
+          "Logo.png"
+        ]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript> -->
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-transparent position-fixed w-100 z-3"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img
+            src="/assets/img/Logo.png"
+            alt="Jasmine"
+            width="170.15"
+            height="50"
+          />
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">BRANDA</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">PRODUK</a>
+            </li> 
+            <li class="nav-item mx-2">
+              <a href="#" class="nav-link">TENTANG</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="#contact" class="nav-link">KONTAK</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section id="hero">
+      <div class="container h-100 d-flex">
+        <div class="h-100 hero-tagline d-flex flex-column justify-content-center">
+          <h1>Mulai Menciptakan Ruang Impian Anda.</h1>
+          <p>
+            <span class="fw-bold">Jamine Furniture</span> hadir untuk
+            menciptakan ruangan impian anda untuk ruangan keluarga hingga
+            kamar tidur.
+          </p>
+          <button class="button-lg-primary">Temukan Produk</button>
+        </div>
+        <img
+          src="/assets/img/herobenner.png"
+          alt="herobenner"
+          class="img-hero"
+        />
+      </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section id="tentang">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Tentang Kami</h2>
+            <span class="sub-title"
+              >Jamine Furniture hadir menjadi solusi bagi anda</span
+            >
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div data-aos="fade-right" class="col-md-4 text-center">
+            <div class="card-tentang">
+              <div class="circle-icon mx-auto">
+                <img
+                  src="/assets/img/kualitasterbaik.png"
+                  alt="kualitasterbaik"
+                />
+              </div>
+              <h3 class="mt-4">Kualitas Terbaik</h3>
+              <p class="mt-3">
+                Produk yang telah teruji dan terbukti memberikan kualitas baik,
+                dengan harga yang terjangkau.
+              </p>
+            </div>
+          </div>
+
+          <div data-aos="fade-flip" class="col-md-4 text-center">
+            <div class="card-tentang">
+              <div class="circle-icon mx-auto">
+                <img
+                  src="/assets/img/kualitasterbaik.png"
+                  alt="kualitasterbaik"
+                />
+              </div>
+              <h3 class="mt-4">Bervariasi model dan warna</h3>
+              <p class="mt-3">
+                Memiliki beragam model dan warna akan membuat koleksi Anda
+                semakin menarik dan serbaguna.
+              </p>
+            </div>
+          </div>
+
+          <div data-aos="fade-left" class="col-md-4 text-center">
+            <div class="card-tentang">
+              <div class="circle-icon mx-auto">
+                <img
+                  src="/assets/img/kualitasterbaik.png"
+                  alt="kualitasterbaik"
+                />
+              </div>
+              <h3 class="mt-4">Memiliki banyak cabang</h3>
+              <p class="mt-3">
+                Kesuksesan bisnisnya tercermin dari adanya begitu banyak cabang
+                yang tersebar luas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search section -->
+    <section id="search" class="d-flex align-items-center">
+      <div class="container">
+        <div class="text-center">
+          <h2>Ciptakan Ruangan Impian Anda dengan Mudah</h2>
+          <p>
+            Sekarang anda dapat menciptakan ruangan dengan ide kreatif anda,
+            dan dapat mengemat waktu,pikiran, hingga biaya yang membuat anda
+            stress
+          </p>
+        </div>
+        <div class="mx-auto mt-5">
+          <div class="input-cari mb-3">
+            <button
+              class="button-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="padding: 1em;"
+            >
+              <i class="material-icons">add_shopping_cart</i> Produk
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Meja</a></li>
+              <li><a class="dropdown-item" href="#">Lemari</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Rak</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Kursi</a></li>
+            </ul>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Text input with dropdown button"
+              placeholder="Cari berdasarkan nama produk, jenis produk"
+            />
+            <button
+              class="button-primary px-4"
+              type="button"
+              id="button-addon2"
+            >
+              Cari
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produk -->
+    <section id="produk">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-12 text-center">
+            <h2>Produk Kami</h2>
+            <span class="sub-title">Temukan Barang Impian Anda</span>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <div data-aos="fade-right" class="mb-4">
+            <div class="card-produk p-2">
+              <img
+                src="assets/img/produk/lemaripakaian.png"
+                alt="lemaripakaian"
+              />
+              <div class="card-body">
+                <h4 class="text-center">Lemari Pakaian</h4>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="mb-4">
+            <div class="card-produk p-2">
+              <img
+                src="assets/img/produk/lemaripakaian.png"
+                alt="lemaripakaian"
+              />
+              <div class="card-body">
+                <h4 class="text-center">Lemari Pakaian</h4>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-left" class="mb-4">
+            <div class="card-produk p-2">
+              <img
+                src="assets/img/produk/lemari1.svg"
+                alt="lemari1"
+              />
+              <div class="card-body">
+                <h4 class="text-center">Lemari Hias</h4>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-right" class="mb-4">
+            <div class="card-produk p-2">
+              <img
+                src="assets/img/produk/lemariTv.svg"
+                alt="lemaripakaian"
+              />
+              <div class="card-body">
+                <h4 class="text-center">Lemari Tv</h4>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="mb-4">
+            <div class="card-produk p-2">
+              <img
+                src="assets/img/produk/lemariserbaguna.svg"
+                alt="lemaripakaian"
+              />
+              <div class="card-body">
+                <h4 class="text-center">Lemari Serba Guna</h4>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-left" class="mb-4">
+            <div class="card-produk p-2">
+              <img
+                src="assets/img/produk/lemaripakaian.png"
+                alt="lemaripakaian"
+              />
+              <div class="card-body">
+                <h4 class="text-center">Lemari Pakaian</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Maps -->
+    <section id="maps">
+      <div class="container-fluid">
+        <div class="container px-2">
+            <div class="text-center">
+              <h2>Maps</h2>
+              <p class="px-2">Anda dapat menemukan lokasi kami.</p>
+            </div>
+              <div class="flex-responsif-reverse">
+                <!-- Kontainer main office dan sosial media -->
+                <div class="flex-responsif">
+                  <!-- main office -->
+                  <div>
+                    <h6 class="text-left mb-3">Main Office</h6>
+                    <div class="mb-3 d-flex align-items-center">
+                      <i class="material-icons">location_city</i
+                      ><a
+                        class="px-2"
+                        href="https://www.google.com/maps/place/Kota+Semarang,+Jawa+Tengah/@-7.0245522,110.3346623,12z/data=!3m1!4b1!4m6!3m5!1s0x2e708b4d3f0d024d:0x1e0432b9da5cb9f2!8m2!3d-7.0051453!4d110.4381254!16zL20vMDQ5Nm1o?entry=ttu"
+                        >Jl. Pelabuhan Kendal, Gedangan, Wonorejo, Kec. Kaliwungu, Kabupaten Kendal, Jawa Tengah </a
+                      >
+                    </div>
+
+                    <div class="mb-2 d-flex align-items-center">
+                      <i class="material-icons">email</i
+                      ><a class="px-2" href="#">Company@example.com</a>
+                    </div>
+
+                    <div class="mb-3 d-flex align-items-center">
+                      <i class="material-icons">local_phone</i
+                      ><a class="px-2" href="#">022 - 6746 -7362</a>
+                    </div>
+                  </div>
+
+                  <!-- sosial media -->
+                  <div>
+                    <h6 class="text-left mb-3">Sosial Media</h6>
+                    <div class="mb-3 d-flex align-items-center">
+                      <i  class="fa-brands fa-tiktok w-30 h-30"></i></i><a
+                        class="px-2"
+                        href="#"
+                        >Jasmine Furniture</a
+                      >
+                    </div>
+                    <div class="mb-2 d-flex align-items-center">
+                      <i class="fa-brands fa-instagram w-30 h-30"></i><a class="px-2" href="#">Jasmine Furniture</a>
+                    </div>
+                    <div class="mb-3 d-flex align-items-center">
+                      <i class="fa-brands fa-facebook fa-flip w-30 h-30"></i><a class="px-2" href="#">Jasmine Furniture</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- kontainer map -->
+                <div class="border-1 d-flex align-items-center justify-content-end">
+                  <div class="card-maps d-flex align-items-center justify-content-center">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.662745888431!2d110.27105141095505!3d-6.930853093040069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e705fea4f7ff9e1%3A0xb478db0ea257baa5!2sPT.CBM!5e0!3m2!1sid!2sid!4v1699499223528!5m2!1sid!2sid"
+                      width="100%"
+                      height="300px"
+                      frameborder="0"
+                      scrolling="no"
+                      marginheight="0"
+                      marginwidth="0"
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container-fluid overlay h-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h2>Kontak Kami</h2>
+              <p class="contact-kecil">
+                Jika ada pertanyaan mengenai kami, jangan sungkan untuk mengubungi kami
+              </p>
+            </div>
+            <div class="col-12">
+              <div class="container col-10">
+                <form>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control input-custom" id="floatingInput" placeholder="Masukkan nama anda disini...">
+                    <label for="floatingInput">Nama</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control input-custom" id="floatingPassword" placeholder="Masukkan email anda disini...">
+                    <label for="floatingPassword">Email</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <textarea class="form-control input-custom" placeholder="Masukkan pertanyaan anda..." id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Pertanyaan</label>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="button-kontak">Kirim</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-3">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+            </div>
+            <div class="col-md-5">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">Copyright by Creative Jasmine Furniture All Right Reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Opsional; Pilih salah satu dari dua berikut! -->
+
+    <!-- JS AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="js/script.js"></script>
+
+    <!-- Pilihan 1: Bootstrap Bundle dengan Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Pilihan 2: Popper dan Bootstrap JS Terpisah -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

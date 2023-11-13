@@ -1,0 +1,80 @@
+/* Responsif untuk layar dengan lebar maksimum 922px */
+@media screen and (max-width: 922px) {
+  /* Tambahkan aturan CSS untuk penyesuaian pada layar dengan lebar maksimum 922px */
+}
+
+/* Responsif untuk layar dengan lebar maksimum 576px */
+@media screen and (max-width: 576px) {
+  /* Tambahkan aturan CSS untuk penyesuaian pada layar dengan lebar maksimum 576px */
+  .hero-tagline h1 {
+    line-height: 42px;
+    font-size: 32px;
+  }
+  .img-hero {
+    /* width: 70%;
+    height: auto; */
+    display: none;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .sub-title {
+    font-size: 16px;
+  }
+  .card-tentang {
+    margin: 15px 0;
+  }
+  #search h2 {
+    font-size: 30px;
+    line-height: 28px;
+  }
+  #search p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .input-cari .button-secondary {
+    width: 30%;
+    height: 60px;
+  }
+  .input-cari .material-icons {
+    font-size: 20px;
+    /* height: 60px; */
+  }
+  .input-cari .button-primary {
+    height: 60px;
+    width: 25%;
+    font-size: 18px;
+  }
+  .input-cari .from-control {
+    height: 40px !important;
+    width: 30%;
+  }
+  #produk img {
+    width: 50vw;
+  }
+  .flex-responsif {
+    display: flex;
+    justify-content: center;
+  }
+  .flex-responsif > div {
+    width: 50%;
+  }
+  .flex-responsif-reverse {
+    display: block;
+  }
+  .flex-responsif-reverse > div {
+    width: 100%;
+  }
+}
+
+/* Responsif untuk layar dengan lebar maksimum 350px */
+@media screen and (max-width: 350px) {
+  /* Tambahkan aturan CSS untuk penyesuaian pada layar dengan lebar maksimum 350px */
+  .hero-tagline h1 {
+    line-height: 32px;
+  }
+  .img-hero {
+    width: 30%;
+  }
+}
