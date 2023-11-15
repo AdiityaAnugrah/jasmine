@@ -4,7 +4,6 @@
     <!-- Meta Tag yang Diperlukan -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
 
     <!-- Font dari Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,8 +18,11 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    
-    <script src="https://kit.fontawesome.com/917733e7d4.js" crossorigin="anonymous"></script>
+
+    <script
+      src="https://kit.fontawesome.com/917733e7d4.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- AOS -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
@@ -61,11 +63,31 @@
   <body>
     <!-- nmpilin gambar -->
     <div id="show-gambar" class="container-gambar-besar hide">
-      <div style="width: 100%; padding: 10px 20px; display: flex; justify-content: end; height: 30px;">
-        <i class="material-icons" onclick="handleClose()" style="cursor: pointer;">close</i>
+      <div
+        style="
+          width: 100%;
+          padding: 10px 20px;
+          display: flex;
+          justify-content: end;
+          height: 30px;
+        "
+      >
+        <i
+          class="material-icons"
+          onclick="handleClose()"
+          style="cursor: pointer"
+          >close</i
+        >
       </div>
-      <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
-        <img src="/assets/img/produk/lemari1.svg" alt="">
+      <div
+        style="
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <img src="/assets/img/produk/lemari1.svg" alt="" />
       </div>
       <div class="pb-3">
         <a class="button-beli" id="btn-store">Go to store</a>
@@ -84,7 +106,15 @@
             height="50"
           />
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -94,7 +124,7 @@
             </li>
             <li class="nav-item mx-2">
               <a class="nav-link" href="#">PRODUK</a>
-            </li> 
+            </li>
             <li class="nav-item mx-2">
               <a href="#" class="nav-link">TENTANG</a>
             </li>
@@ -109,20 +139,18 @@
     <!-- Hero section -->
     <section id="hero">
       <div class="container h-100 d-flex">
-        <div class="h-100 hero-tagline d-flex flex-column justify-content-center">
+        <div
+          class="h-100 hero-tagline d-flex flex-column justify-content-center"
+        >
           <h1>Mulai Menciptakan Ruang Impian Anda.</h1>
           <p>
             <span class="fw-bold">Jamine Furniture</span> hadir untuk
-            menciptakan ruangan impian anda untuk ruangan keluarga hingga
-            kamar tidur.
+            menciptakan ruangan impian anda untuk ruangan keluarga hingga kamar
+            tidur.
           </p>
           <button class="button-lg-primary">Temukan Produk</button>
         </div>
-        <img
-          src="/assets/img/herobenner.png"
-          alt="herobenner"
-          class="img-hero"
-        />
+        <img src="/assets/img/p.svg" alt="herobenner" class="img-hero" />
       </div>
     </section>
 
@@ -196,9 +224,8 @@
         <div class="text-center">
           <h2>Ciptakan Ruangan Impian Anda dengan Mudah</h2>
           <p>
-            Sekarang anda dapat menciptakan ruangan dengan ide kreatif anda,
-            dan dapat mengemat waktu,pikiran, hingga biaya yang membuat anda
-            stress
+            Sekarang anda dapat menciptakan ruangan dengan ide kreatif anda, dan
+            dapat mengemat waktu,pikiran, hingga biaya yang membuat anda stress
           </p>
         </div>
         <div class="mx-auto mt-5">
@@ -208,7 +235,7 @@
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              style="padding: 1em;"
+              style="padding: 1em"
             >
               <i class="material-icons">add_shopping_cart</i> Produk
             </button>
@@ -249,7 +276,11 @@
           </div>
         </div>
         <div class="d-flex flex-wrap justify-content-center gap-2">
-          <div data-aos="fade-right" class="mb-4" onclick="handleProduk('lemaripakaian.png')">
+          <div
+            data-aos="fade-right"
+            class="mb-4"
+            onclick="handleProduk('lemaripakaian.png')"
+          >
             <div class="card-produk p-2">
               <img
                 src="assets/img/produk/lemaripakaian.png"
@@ -260,7 +291,11 @@
               </div>
             </div>
           </div>
-          <div data-aos="fade-up" class="mb-4" onclick="handleProduk('lemaripakaian.png')">
+          <div
+            data-aos="fade-up"
+            class="mb-4"
+            onclick="handleProduk('lemaripakaian.png')"
+          >
             <div class="card-produk p-2">
               <img
                 src="assets/img/produk/lemaripakaian.png"
@@ -271,29 +306,35 @@
               </div>
             </div>
           </div>
-          <div data-aos="fade-left" class="mb-4" onclick="handleProduk('lemari1.svg')">
+          <div
+            data-aos="fade-left"
+            class="mb-4"
+            onclick="handleProduk('lemari1.svg')"
+          >
             <div class="card-produk p-2">
-              <img
-                src="assets/img/produk/lemari1.svg"
-                alt="lemari1"
-              />
+              <img src="assets/img/produk/lemari1.svg" alt="lemari1" />
               <div class="card-body">
                 <h4 class="text-center">Lemari Hias</h4>
               </div>
             </div>
           </div>
-          <div data-aos="fade-right" class="mb-4" onclick="handleProduk('lemariTv.svg')">
+          <div
+            data-aos="fade-right"
+            class="mb-4"
+            onclick="handleProduk('lemariTv.svg')"
+          >
             <div class="card-produk p-2">
-              <img
-                src="assets/img/produk/lemariTv.svg"
-                alt="lemaripakaian"
-              />
+              <img src="assets/img/produk/lemariTv.svg" alt="lemaripakaian" />
               <div class="card-body">
                 <h4 class="text-center">Lemari Tv</h4>
               </div>
             </div>
           </div>
-          <div data-aos="fade-up" class="mb-4" onclick="handleProduk('lemariserbaguna.svg')">
+          <div
+            data-aos="fade-up"
+            class="mb-4"
+            onclick="handleProduk('lemariserbaguna.svg')"
+          >
             <div class="card-produk p-2">
               <img
                 src="assets/img/produk/lemariserbaguna.svg"
@@ -304,7 +345,11 @@
               </div>
             </div>
           </div>
-          <div data-aos="fade-left" class="mb-4" onclick="handleProduk('lemaripakaian.png')">
+          <div
+            data-aos="fade-left"
+            class="mb-4"
+            onclick="handleProduk('lemaripakaian.png')"
+          >
             <div class="card-produk p-2">
               <img
                 src="assets/img/produk/lemaripakaian.png"
@@ -323,70 +368,72 @@
     <section id="maps">
       <div class="container-fluid">
         <div class="container px-2">
-            <div class="text-center">
-              <h2>Maps</h2>
-              <p class="px-2">Anda dapat menemukan lokasi kami.</p>
-            </div>
-              <div class="flex-responsif-reverse">
-                <!-- Kontainer main office dan sosial media -->
-                <div class="flex-responsif">
-                  <!-- main office -->
-                  <div>
-                    <h6 class="text-left mb-3">Main Office</h6>
-                    <div class="mb-3 d-flex align-items-center">
-                      <i class="material-icons">location_city</i
-                      ><a
-                        href="https://www.google.com/maps/place/Kota+Semarang,+Jawa+Tengah/@-7.0245522,110.3346623,12z/data=!3m1!4b1!4m6!3m5!1s0x2e708b4d3f0d024d:0x1e0432b9da5cb9f2!8m2!3d-7.0051453!4d110.4381254!16zL20vMDQ5Nm1o?entry=ttu"
-                        >Jl. Pelabuhan Kendal, Gedangan, Wonorejo, Kec. Kaliwungu, Kabupaten Kendal, Jawa Tengah </a
-                      >
-                    </div>
-
-                    <div class="mb-2 d-flex align-items-center">
-                      <i class="material-icons">email</i
-                      ><a href="#">Company @example.com</a>
-                    </div>
-
-                    <div class="mb-3 d-flex align-items-center">
-                      <i class="material-icons">local_phone</i
-                      ><a href="#">022 - 6746 -7362</a>
-                    </div>
-                  </div>
-
-                  <!-- sosial media -->
-                  <div>
-                    <h6 class="text-left mb-3">Sosial Media</h6>
-                    <div class="mb-3 d-flex align-items-center">
-                      <i  class="fa-brands fa-tiktok h-30"></i><a
-                        href="#"
-                        >Jasmine Furniture</a
-                      >
-                    </div>
-                    <div class="mb-2 d-flex align-items-center">
-                      <i class="fa-brands fa-instagram h-30"></i><a href="#">Jasmine Furniture</a>
-                    </div>
-                    <div class="mb-3 d-flex align-items-center">
-                      <i class="fa-brands fa-facebook fa-flip h-30"></i><a href="#">Jasmine Furniture</a>
-                    </div>
-                  </div>
+          <div class="text-center">
+            <h2>Maps</h2>
+            <p class="px-2">Anda dapat menemukan lokasi kami.</p>
+          </div>
+          <div class="flex-responsif-reverse">
+            <!-- Kontainer main office dan sosial media -->
+            <div class="flex-responsif">
+              <!-- main office -->
+              <div>
+                <h6 class="text-left mb-3">Main Office</h6>
+                <div class="mb-3 d-flex align-items-center">
+                  <i class="material-icons">location_city</i
+                  ><a
+                    href="https://www.google.com/maps/place/Kota+Semarang,+Jawa+Tengah/@-7.0245522,110.3346623,12z/data=!3m1!4b1!4m6!3m5!1s0x2e708b4d3f0d024d:0x1e0432b9da5cb9f2!8m2!3d-7.0051453!4d110.4381254!16zL20vMDQ5Nm1o?entry=ttu"
+                    >Jl. Pelabuhan Kendal, Gedangan, Wonorejo, Kec. Kaliwungu,
+                    Kabupaten Kendal, Jawa Tengah
+                  </a>
                 </div>
 
-                <!-- kontainer map -->
-                <div class="border-1 d-flex align-items-center justify-content-end">
-                  <div class="card-maps d-flex align-items-center justify-content-center">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.662745888431!2d110.27105141095505!3d-6.930853093040069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e705fea4f7ff9e1%3A0xb478db0ea257baa5!2sPT.CBM!5e0!3m2!1sid!2sid!4v1699499223528!5m2!1sid!2sid"
-                      width="100%"
-                      height="300px"
-                      frameborder="0"
-                      scrolling="no"
-                      marginheight="0"
-                      marginwidth="0"
-                      loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                  </div>
+                <div class="mb-2 d-flex align-items-center">
+                  <i class="material-icons">email</i
+                  ><a href="#">Company @example.com</a>
+                </div>
+
+                <div class="mb-3 d-flex align-items-center">
+                  <i class="material-icons">local_phone</i
+                  ><a href="#">022 - 6746 -7362</a>
                 </div>
               </div>
+
+              <!-- sosial media -->
+              <div>
+                <h6 class="text-left mb-3">Sosial Media</h6>
+                <div class="mb-3 d-flex align-items-center">
+                  <i class="fa-brands fa-tiktok h-30"></i
+                  ><a href="#">Jasmine Furniture</a>
+                </div>
+                <div class="mb-2 d-flex align-items-center">
+                  <i class="fa-brands fa-instagram h-30"></i
+                  ><a href="#">Jasmine Furniture</a>
+                </div>
+                <div class="mb-3 d-flex align-items-center">
+                  <i class="fa-brands fa-facebook fa-flip h-30"></i
+                  ><a href="#">Jasmine Furniture</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- kontainer map -->
+            <div class="border-1 d-flex align-items-center justify-content-end">
+              <div
+                class="card-maps d-flex align-items-center justify-content-center"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.662745888431!2d110.27105141095505!3d-6.930853093040069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e705fea4f7ff9e1%3A0xb478db0ea257baa5!2sPT.CBM!5e0!3m2!1sid!2sid!4v1699499223528!5m2!1sid!2sid"
+                  width="100%"
+                  height="300px"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -400,26 +447,44 @@
             <div class="col-12 text-center">
               <h2>Kontak Kami</h2>
               <p class="contact-kecil">
-                Jika ada pertanyaan mengenai kami, jangan sungkan untuk mengubungi kami
+                Jika ada pertanyaan mengenai kami, jangan sungkan untuk
+                mengubungi kami
               </p>
             </div>
             <div class="col-12">
               <div class="container col-10">
                 <form>
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control input-custom" id="floatingInput" placeholder="Masukkan nama anda disini...">
+                    <input
+                      type="text"
+                      class="form-control input-custom"
+                      id="floatingInput"
+                      placeholder="Masukkan nama anda disini..."
+                    />
                     <label for="floatingInput">Nama</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="email" class="form-control input-custom" id="floatingPassword" placeholder="Masukkan email anda disini...">
+                    <input
+                      type="email"
+                      class="form-control input-custom"
+                      id="floatingPassword"
+                      placeholder="Masukkan email anda disini..."
+                    />
                     <label for="floatingPassword">Email</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <textarea class="form-control input-custom" placeholder="Masukkan pertanyaan anda..." id="floatingTextarea2" style="height: 200px;"></textarea>
+                    <textarea
+                      class="form-control input-custom"
+                      placeholder="Masukkan pertanyaan anda..."
+                      id="floatingTextarea2"
+                      style="height: 200px"
+                    ></textarea>
                     <label for="floatingTextarea2">Pertanyaan</label>
                   </div>
                   <div class="text-center">
-                    <button type="submit" class="button-lg-primary">Kirim</button>
+                    <button type="submit" class="button-lg-primary">
+                      Kirim
+                    </button>
                   </div>
                 </form>
               </div>
@@ -428,22 +493,20 @@
         </div>
       </div>
     </section>
-    
-
 
     <!-- Footer -->
     <footer class="bg-dark text-light py-3">
       <div class="container-fluid">
         <div class="container">
           <div class="row">
-            <div class="col-md-7">
-            </div>
-            <div class="col-md-5">
-            </div>
+            <div class="col-md-7"></div>
+            <div class="col-md-5"></div>
           </div>
           <div class="row">
             <div class="col-12">
-              <p class="text-center">Copyright by Creative Jasmine Furniture All Right Reserved</p>
+              <p class="text-center">
+                Copyright by Creative Jasmine Furniture All Right Reserved
+              </p>
             </div>
           </div>
         </div>
