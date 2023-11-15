@@ -349,3 +349,25 @@ h2 {
 footer > .atas > div {
     width: 100%;
 }
+
+.card-kategori {
+    padding: 1em;
+    width: 230px;
+    background-color: whitesmoke;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.card-kategori h3 {
+    color: black;
+    font-size: large;
+}
+.card-kategori img {
+    width: 100%;
+    margin-bottom: 1em;
+}
+.card-kategori:hover {
+    background-color: var(--pr-color);
+    transition: 0.3s;
+}
