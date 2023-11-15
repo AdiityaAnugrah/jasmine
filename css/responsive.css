@@ -6,9 +6,13 @@
 /* Responsif untuk layar dengan lebar maksimum 576px */
 @media screen and (max-width: 576px) {
   /* Tambahkan aturan CSS untuk penyesuaian pada layar dengan lebar maksimum 576px */
+  #hero {
+    padding: 0 20px;
+  }
   .hero-tagline h1 {
     line-height: 42px;
     font-size: 32px;
+    width: 80%;
   }
   .img-hero {
     /* width: 70%;
@@ -53,6 +57,7 @@
   #produk img {
     width: 50vw;
   }
+  /* resopnsif utk main office dan sosmed */
   .flex-responsif {
     display: flex;
     justify-content: center;
@@ -60,6 +65,7 @@
   .flex-responsif > div {
     width: 50%;
   }
+  /* resopnsif reverse utk main office-sosmed dan map*/
   .flex-responsif-reverse {
     display: block;
   }

@@ -23,7 +23,7 @@
     <script src="https://kit.fontawesome.com/917733e7d4.js" crossorigin="anonymous"></script>
 
     <!-- AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
 
     <!-- Stylesheet Eksternal -->
     <link rel="stylesheet" href="css/style.css" />
@@ -59,8 +59,21 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript> -->
   </head>
   <body>
+    <!-- nmpilin gambar -->
+    <div id="show-gambar" class="container-gambar-besar hide">
+      <div style="width: 100%; padding: 10px 20px; display: flex; justify-content: end; height: 30px;">
+        <i class="material-icons" onclick="handleClose()" style="cursor: pointer;">close</i>
+      </div>
+      <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+        <img src="/assets/img/produk/lemari1.svg" alt="">
+      </div>
+      <div class="pb-3">
+        <a class="button-beli" id="btn-store">Go to store</a>
+      </div>
+    </div>
+
     <nav
-      class="navbar navbar-expand-lg navbar-light bg-transparent position-fixed w-100 z-3"
+      class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-transparent position-fixed w-100"
     >
       <div class="container">
         <a class="navbar-brand" href="/">
@@ -71,7 +84,9 @@
             height="50"
           />
         </a>
-
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -234,7 +249,7 @@
           </div>
         </div>
         <div class="d-flex flex-wrap justify-content-center gap-2">
-          <div data-aos="fade-right" class="mb-4">
+          <div data-aos="fade-right" class="mb-4" onclick="handleProduk('lemaripakaian.png')">
             <div class="card-produk p-2">
               <img
                 src="assets/img/produk/lemaripakaian.png"
@@ -245,7 +260,7 @@
               </div>
             </div>
           </div>
-          <div data-aos="fade-up" class="mb-4">
+          <div data-aos="fade-up" class="mb-4" onclick="handleProduk('lemaripakaian.png')">
             <div class="card-produk p-2">
               <img
                 src="assets/img/produk/lemaripakaian.png"
@@ -256,7 +271,7 @@
               </div>
             </div>
           </div>
-          <div data-aos="fade-left" class="mb-4">
+          <div data-aos="fade-left" class="mb-4" onclick="handleProduk('lemari1.svg')">
             <div class="card-produk p-2">
               <img
                 src="assets/img/produk/lemari1.svg"
@@ -267,7 +282,7 @@
               </div>
             </div>
           </div>
-          <div data-aos="fade-right" class="mb-4">
+          <div data-aos="fade-right" class="mb-4" onclick="handleProduk('lemariTv.svg')">
             <div class="card-produk p-2">
               <img
                 src="assets/img/produk/lemariTv.svg"
@@ -278,7 +293,7 @@
               </div>
             </div>
           </div>
-          <div data-aos="fade-up" class="mb-4">
+          <div data-aos="fade-up" class="mb-4" onclick="handleProduk('lemariserbaguna.svg')">
             <div class="card-produk p-2">
               <img
                 src="assets/img/produk/lemariserbaguna.svg"
@@ -289,7 +304,7 @@
               </div>
             </div>
           </div>
-          <div data-aos="fade-left" class="mb-4">
+          <div data-aos="fade-left" class="mb-4" onclick="handleProduk('lemaripakaian.png')">
             <div class="card-produk p-2">
               <img
                 src="assets/img/produk/lemaripakaian.png"
@@ -321,7 +336,6 @@
                     <div class="mb-3 d-flex align-items-center">
                       <i class="material-icons">location_city</i
                       ><a
-                        class="px-2"
                         href="https://www.google.com/maps/place/Kota+Semarang,+Jawa+Tengah/@-7.0245522,110.3346623,12z/data=!3m1!4b1!4m6!3m5!1s0x2e708b4d3f0d024d:0x1e0432b9da5cb9f2!8m2!3d-7.0051453!4d110.4381254!16zL20vMDQ5Nm1o?entry=ttu"
                         >Jl. Pelabuhan Kendal, Gedangan, Wonorejo, Kec. Kaliwungu, Kabupaten Kendal, Jawa Tengah </a
                       >
@@ -329,12 +343,12 @@
 
                     <div class="mb-2 d-flex align-items-center">
                       <i class="material-icons">email</i
-                      ><a class="px-2" href="#">Company@example.com</a>
+                      ><a href="#">Company @example.com</a>
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
                       <i class="material-icons">local_phone</i
-                      ><a class="px-2" href="#">022 - 6746 -7362</a>
+                      ><a href="#">022 - 6746 -7362</a>
                     </div>
                   </div>
 
@@ -342,17 +356,16 @@
                   <div>
                     <h6 class="text-left mb-3">Sosial Media</h6>
                     <div class="mb-3 d-flex align-items-center">
-                      <i  class="fa-brands fa-tiktok w-30 h-30"></i></i><a
-                        class="px-2"
+                      <i  class="fa-brands fa-tiktok h-30"></i><a
                         href="#"
                         >Jasmine Furniture</a
                       >
                     </div>
                     <div class="mb-2 d-flex align-items-center">
-                      <i class="fa-brands fa-instagram w-30 h-30"></i><a class="px-2" href="#">Jasmine Furniture</a>
+                      <i class="fa-brands fa-instagram h-30"></i><a href="#">Jasmine Furniture</a>
                     </div>
                     <div class="mb-3 d-flex align-items-center">
-                      <i class="fa-brands fa-facebook fa-flip w-30 h-30"></i><a class="px-2" href="#">Jasmine Furniture</a>
+                      <i class="fa-brands fa-facebook fa-flip h-30"></i><a href="#">Jasmine Furniture</a>
                     </div>
                   </div>
                 </div>
@@ -402,11 +415,11 @@
                     <label for="floatingPassword">Email</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <textarea class="form-control input-custom" placeholder="Masukkan pertanyaan anda..." id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Pertanyaan</label>
+                    <textarea class="form-control input-custom" placeholder="Masukkan pertanyaan anda..." id="floatingTextarea2" style="height: 200px;"></textarea>
+                    <label for="floatingTextarea2">Pertanyaan</label>
                   </div>
                   <div class="text-center">
-                    <button type="submit" class="button-kontak">Kirim</button>
+                    <button type="submit" class="button-lg-primary">Kirim</button>
                   </div>
                 </form>
               </div>

@@ -7,3 +7,27 @@ window.addEventListener("scroll", function () {
     navbar.classList.replace("nav-color", "bg-transparent");
   }
 });
+
+const burgerNav = document.querySelector(".navbar-toggler");
+burgerNav.addEventListener("click", () => {
+  if (navbar.classList.contains("bg-transparent")) {
+    navbar.classList.replace("bg-transparent", "nav-color");
+  } else {
+    navbar.classList.replace("nav-color", "bg-transparent");
+  }
+});
+
+const elmKontainerGmbr = document.getElementById("show-gambar");
+const elmGmbrShow = document.querySelector(".container-gambar-besar img");
+const elmBtnStore = document.querySelector("#btn-store");
+
+function handleProduk(nama) {
+  console.log(nama);
+  elmKontainerGmbr.classList.remove("hide");
+  elmGmbrShow.src = `/assets/img/produk/${nama}`;
+  elmBtnStore.href = "https://www.google.com/";
+}
+
+function handleClose() {
+  elmKontainerGmbr.classList.add("hide");
+}

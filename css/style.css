@@ -65,13 +65,14 @@ body {
 }
 
 .button-lg-primary {
-  width: 226px;
-  height: 52px;
+  padding: 10px 20px;
+  width: fit-content;
   background-color: #ae0505;
   /* margin-left: 20vh; */
   border-radius: 8px;
   font-weight: 500;
   color: #fff;
+  border-style: none;
 }
 
 /* Tentang Section */
@@ -212,9 +213,7 @@ h2 {
 .fa-brands {
   display: inline-block;
   margin: 0;
-  padding: 0;
-  height: 30px;
-  width: 30px;
+  padding: 5px;
 }
 
 /* Produk Kami */
@@ -277,7 +276,6 @@ h2 {
 
 /* Contact */
 #contact {
-  height: 100vh;
   width: 100%;
 
   background-image: url(../assets/img/kontakimage.svg);
@@ -297,19 +295,50 @@ h2 {
   text-size: 20px;
 }
 
-.button-kontak {
-  width: 170px;
-  height: 50px;
-  background-color: #ae0505;
-  /* margin-left: 20vh; */
-  border-radius: 8px;
-  font-weight: 500;
-  color: #fff;
-}
-
 .flex-responsif-reverse {
   display: flex;
 }
 .flex-responsif-reverse > div {
   width: 50%;
+}
+
+.container-gambar-besar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-gambar-besar img {
+  height: 100%;
+  max-height: calc(100vh - 100px);
+  width: 100%;
+}
+.container-gambar-besar i {
+  color: white;
+}
+.hide {
+  display: none;
+}
+.button-beli {
+  display: block;
+  background-color: #ff0000;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: fit-content;
+  margin-inline: auto;
+  transition: 0.2s;
+}
+.button-beli:hover {
+  background-color: white;
+  color: black;
+  transition: 0.2s;
 }
