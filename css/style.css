@@ -41,8 +41,9 @@ body {
 /* Hero section */
 
 #hero {
+  padding-top: 5em;
   background: linear-gradient(160deg, var(--sc-color), #fff);
-  height: 100vh;
+  height: fit-content;
   width: 100%;
 }
 
@@ -81,6 +82,13 @@ body {
   font-weight: 500;
   color: #fff;
   border-style: none;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.button-lg-primary:hover {
+  color: var(--pr-color);
+  background-color: #ffffff;
+  transition: 0.5s;
 }
 
 /* Tentang Section */
@@ -198,7 +206,9 @@ h2 {
   cursor: pointer;
 }
 .circle-icon-mengapa:hover {
-  scale: 1.1;
+  /* scale: 1.1; */
+  transform: scale(1.1);
+  z-index: -1;
 }
 
 /* Search  */
@@ -426,4 +436,24 @@ footer > .atas > div {
 .card-kategori:hover {
   background-color: var(--pr-color);
   transition: 0.3s;
+}
+
+.header-gambar {
+  background-image: url("/assets/img/header-produk.webp");
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+}
+.kotak-tentang {
+  text-align: center;
+  border: 1px solid var(--pr-color);
+  padding: 2em;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

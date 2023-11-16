@@ -7,7 +7,16 @@
 @media screen and (max-width: 576px) {
   /* Tambahkan aturan CSS untuk penyesuaian pada layar dengan lebar maksimum 576px */
   #hero {
-    padding: 0 20px;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #hero > div {
+    flex: 1;
+    padding: 0 2em;
   }
   .hero-tagline h1 {
     line-height: 42px;
