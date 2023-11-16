@@ -34,8 +34,9 @@ body {
   border-bottom: 3px solid var(--pr-color);
 }
 
-.nav-link .active {
+.nav-link.active {
   font-weight: 700;
+  color: var(--pr-color);
 }
 
 /* Hero section */
@@ -444,7 +445,7 @@ footer > .atas > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffff;
+  color: var(--fr-color);
 }
 .kotak-tentang {
   text-align: center;
@@ -456,4 +457,11 @@ footer > .atas > div {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.garis {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--sc-color);
 }
