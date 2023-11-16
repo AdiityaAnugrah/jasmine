@@ -1,373 +1,382 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 :root {
-    --pr-color: #ae0505;
-    --sc-color: #848484;
+  --pr-color: #b31312;
+  --sc-color: #848484;
 }
 
 * {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 body {
-    background-color: #929292;
-    background: #a8a6a6;
+  background-color: #929292;
+  background: #a8a6a6;
 }
 
 /* navbar color */
 .nav-color {
-    background-color: whitesmoke;
-    transition: all-ease-in-out 0.5s;
+  background-color: whitesmoke;
+  transition: all-ease-in-out 0.5s;
 }
 /* navbar */
 .nav-brand {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .nav-link {
-    font-size: 16px;
-    border-bottom: 3px solid rgba(0, 0, 0, 0);
+  font-size: 16px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
 }
 .nav-link:hover {
-    border-bottom: 3px solid var(--pr-color);
+  border-bottom: 3px solid var(--pr-color);
 }
 
 .nav-link .active {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 /* Hero section */
 
 #hero {
-    background: linear-gradient(160deg, var(--sc-color), #fff);
-    height: 100vh;
-    width: 100%;
+  background: linear-gradient(160deg, var(--sc-color), #fff);
+  height: 100vh;
+  width: 100%;
 }
 
 .img-hero {
-    width: 40%;
+  width: 40%;
 }
 
 .hero-tagline h1 {
-    font-weight: 700;
-    color: black;
-    font-size: 50px;
-    line-height: auto;
-    letter-spacing: 0%;
-    text-align: left;
+  font-weight: 700;
+  color: black;
+  font-size: 50px;
+  line-height: auto;
+  letter-spacing: 0%;
+  text-align: left;
 }
 .hero-tagline p {
-    color: black;
-    font-size: 16px;
-    margin-bottom: 40px;
-    margin-top: 20px;
-    text-align: left;
-    line-height: 30px;
-    width: 85%;
+  color: black;
+  font-size: 16px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  text-align: left;
+  line-height: 30px;
+  width: 85%;
 }
 .hero-tagline span {
-    color: #ae0505;
-    font-weight: 700;
+  color: #b31312;
+  font-weight: 700;
 }
 
 .button-lg-primary {
-    padding: 10px 20px;
-    width: fit-content;
-    background-color: #ae0505;
-    /* margin-left: 20vh; */
-    border-radius: 8px;
-    font-weight: 500;
-    color: #fff;
-    border-style: none;
+  padding: 10px 20px;
+  width: fit-content;
+  background-color: #b31312;
+  /* margin-left: 20vh; */
+  border-radius: 8px;
+  font-weight: 500;
+  color: #fff;
+  border-style: none;
 }
 
 /* Tentang Section */
 #tentang {
-    padding: 5em 0;
+  /* padding: 5em 0; */
 }
 h2 {
-    font-size: 42px;
-    font-weight: 500;
-    color: var(--pr-color);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--pr-color);
 }
 
 .sub-title {
-    font-size: 18px;
-    color: black;
+  font-size: 18px;
+  color: black;
 }
 
 .card-tentang {
-    width: 100%;
-    height: 313px;
-    border-radius: 5px;
-    border-color: #ae0505;
-    padding: 40px;
-    background-color: #ffffff;
-    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  height: 313px;
+  border-radius: 5px;
+  border-color: #b31312;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
 }
 
 .circle-icon {
-    width: 90px;
-    height: 90px;
-    background-color: var(--pr-color);
-    border-radius: 50%;
-    transition: all 0.1s ease-in;
+  width: 90px;
+  height: 90px;
+  background-color: var(--pr-color);
+  border-radius: 50%;
+  transition: all 0.1s ease-in;
 }
 
 .card-tentang h3 {
-    color: #000;
-    font-size: 24px;
-    transition: all 0.2s ease-in;
+  color: #000;
+  font-size: 24px;
+  transition: all 0.2s ease-in;
 }
 .card-tentang p {
-    color: #000;
-    font-size: 14px;
-    transition: all 0.3s ease-in;
+  color: #000;
+  font-size: 14px;
+  transition: all 0.3s ease-in;
 }
 
 /* ketika hovver */
 
 .card-tentang:hover {
-    width: 100%;
-    height: 313px;
-    border-radius: 5px;
-    padding: 40px;
-    background: linear-gradient(160deg, #ff0000, #000000);
-    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  height: 313px;
+  border-radius: 5px;
+  padding: 40px;
+  background: linear-gradient(160deg, #ff0000, #000000);
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
 }
 
 .card-tentang:hover .circle-icon {
-    background-color: #ffffff;
-    transition: all 0.2s ease-in;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in;
 }
 
 .card-tentang:hover h3 {
-    color: #fff;
-    font-size: 24px;
-    transition: all 0.2s ease-in;
+  color: #fff;
+  font-size: 24px;
+  transition: all 0.2s ease-in;
 }
 .card-tentang:hover p {
-    color: #fff;
-    font-size: 14px;
-    transition: all 0.3s ease-in;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease-in;
 }
 
+/* Mengapa Kami */
+#mengapakami {
+  background-color: #b31312;
+  padding: 5em 0;
+}
+#mengapakami h2 {
+  font-size: 38px;
+  font-weight: 500;
+  color: #ffffff;
+}
 /* Search  */
-#search {
-    background: url(../assets/img/searchgambar.png),
-        lightgray 50% / cover no-repeat;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* #search {
+  background: url(../assets/img/searchgambar.png),
+    lightgray 50% / cover no-repeat;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #search h2 {
-    color: #ae0505;
-    text-align: center;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+  color: #b31312;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 #search p {
-    color: #000;
-    text-align: center;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .input-cari {
-    display: flex;
+  display: flex;
 }
 
 .input-cari:focus {
-    border: none;
+  border: none;
 }
 
 .input-cari .button-secondary {
-    width: 200px;
-    height: 60px;
-    background-size: rgba(255, 255, 255, 0.8);
-    color: var(--pr-color);
-    font-size: 18px;
-    padding: 0;
-    font-weight: 500;
-    border-radius: 5px;
-    border: none;
+  width: 200px;
+  height: 60px;
+  background-size: rgba(255, 255, 255, 0.8);
+  color: var(--pr-color);
+  font-size: 18px;
+  padding: 0;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
 }
 
 .input-cari .button-primary {
-    height: 60px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--pr-color);
-    color: white;
-    font-size: 24px;
-    font-weight: 500;
+  height: 60px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--pr-color);
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .material-icons {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    height: 30px;
-    width: 30px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  width: 30px;
 }
 .fa-brands {
-    display: inline-block;
-    margin: 0;
-    padding: 5px;
-}
+  display: inline-block;
+  margin: 0;
+  padding: 5px;
+} */
 
 /* Produk Kami */
 #produk {
-    background: linear-gradient(160deg, var(--sc-color), #fff);
-    /* height: 180vh; */
-    width: 100%;
-    padding: 5em 0;
+  background: linear-gradient(160deg, var(--sc-color), #fff);
+  /* height: 180vh; */
+  width: 100%;
 }
 
 .card-produk {
-    background-color: white;
-    border-radius: 5px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .card-body h4 {
-    color: #000;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .card-produk:hover {
-    background-color: #ae0505;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, alpha);
-    transition: all 0.3s ease-in;
+  background-color: #b31312;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, alpha);
+  transition: all 0.3s ease-in;
 }
 
 .card-produk:hover .card-body h4 {
-    color: #fff;
-    transition: all 0.2s ease-in;
+  color: #fff;
+  transition: all 0.2s ease-in;
 }
 
 /* Maps */
 #maps {
-    width: 100%;
-    padding: 5em 0;
+  width: 100%;
+  padding: 5em 0;
 }
 
 #maps a {
-    color: #000;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-decoration: none;
-    margin-left: 8 px;
-    /* width: 320px; */
-    display: inline-block;
-    color: #ae0505;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  margin-left: 8 px;
+  /* width: 320px; */
+  display: inline-block;
+  color: #b31312;
 }
 
 .card-maps {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* Contact */
 #contact {
-    width: 100%;
+  width: 100%;
 
-    background-image: url(../assets/img/kontakimage.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(../assets/img/kontakimage.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #contact .overlay {
-    background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 #contact .container {
-    padding: 5em 0;
+  padding: 5em 0;
 }
 
 .contact-kecil {
-    color: #fff;
-    font-size: 20px;
+  color: #fff;
+  font-size: 20px;
 }
 
 .flex-responsif-reverse {
-    display: flex;
+  display: flex;
 }
 .flex-responsif-reverse > div {
-    width: 50%;
+  width: 50%;
 }
 
 .container-gambar-besar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .container-gambar-besar img {
-    height: 100%;
-    max-height: calc(100vh - 100px);
-    width: 100%;
+  height: 100%;
+  max-height: calc(100vh - 100px);
+  width: 100%;
 }
 .container-gambar-besar i {
-    color: white;
+  color: white;
 }
 .hide {
-    display: none;
+  display: none;
 }
 .button-beli {
-    display: block;
-    background-color: #ff0000;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 5px;
-    width: fit-content;
-    margin-inline: auto;
-    transition: 0.2s;
+  display: block;
+  background-color: #ff0000;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: fit-content;
+  margin-inline: auto;
+  transition: 0.2s;
 }
 .button-beli:hover {
-    background-color: white;
-    color: black;
-    transition: 0.2s;
+  background-color: white;
+  color: black;
+  transition: 0.2s;
 }
 
 footer > .atas > div {
-    width: 100%;
+  width: 100%;
 }
 
 .card-kategori {
-    padding: 1em;
-    width: 230px;
-    background-color: whitesmoke;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
-    cursor: pointer;
+  padding: 1em;
+  width: 230px;
+  background-color: whitesmoke;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
 }
 .card-kategori h3 {
-    color: black;
-    font-size: large;
+  color: #141e46;
+  font-size: large;
 }
 .card-kategori img {
-    width: 100%;
-    margin-bottom: 1em;
+  width: 100%;
+  margin-bottom: 1em;
 }
 .card-kategori:hover {
-    background-color: var(--pr-color);
-    transition: 0.3s;
+  background-color: var(--pr-color);
+  transition: 0.3s;
 }
