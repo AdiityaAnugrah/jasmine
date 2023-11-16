@@ -3,6 +3,9 @@
 :root {
   --pr-color: #b31312;
   --sc-color: #848484;
+  --tr-color: #ea906c;
+  --fr-color: #141e46;
+  --fv-color: #fff5e0;
 }
 
 * {
@@ -83,6 +86,8 @@ body {
 /* Tentang Section */
 #tentang {
   /* padding: 5em 0; */
+  /* background-color: var(--pr-color); */
+  padding-top: 5em;
 }
 h2 {
   font-size: 42px;
@@ -161,6 +166,41 @@ h2 {
   font-weight: 500;
   color: #ffffff;
 }
+.sub-title-mengapa {
+  font-size: 18px;
+  color: var(--fv-color);
+  /* background-color: var(--fv-color); */
+}
+.card-mengapa {
+  width: 100%;
+  height: 313px;
+  padding: 40px;
+  color: #ffffff;
+}
+.card-mengapa h3 {
+  color: var(--fv-color);
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 70px;
+}
+.circle-icon-mengapa {
+  width: 120px;
+  height: 120px;
+  background-color: var(--pr-color);
+  border-radius: 50%;
+  transition: all 0.1s ease-in;
+  border: 1px solid white;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.circle-icon-mengapa:hover {
+  scale: 1.1;
+}
+
 /* Search  */
 /* #search {
   background: url(../assets/img/searchgambar.png),
@@ -233,14 +273,21 @@ h2 {
 
 /* Produk Kami */
 #produk {
-  background: linear-gradient(160deg, var(--sc-color), #fff);
+  background: whitesmoke;
   /* height: 180vh; */
   width: 100%;
+  padding-bottom: 5em;
 }
 
 .card-produk {
   background-color: white;
   border-radius: 5px;
+  padding: 1em;
+}
+
+.card-produk img {
+  width: 100%;
+  height: 100%;
 }
 
 .card-body h4 {
