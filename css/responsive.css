@@ -108,4 +108,8 @@
   .img-hero {
     width: 30%;
   }
+  .kotak-tentang {
+    width: 40%;
+    aspect-ratio: 1/1;
+  }
 }
