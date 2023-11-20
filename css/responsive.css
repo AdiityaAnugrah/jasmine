@@ -71,15 +71,31 @@
     display: flex;
     justify-content: center;
   }
+
   .flex-responsif > div {
     width: 50%;
   }
+
+  .flex-responsif-normal {
+    flex-direction: column-reverse;
+    gap: 2em;
+  }
+  .flex-responsif-normal > div {
+    width: 100%;
+  }
+
   /* resopnsif reverse utk main office-sosmed dan map*/
   .flex-responsif-reverse {
     display: block;
   }
   .flex-responsif-reverse > div {
     width: 100%;
+  }
+  .show-to-hide {
+    display: none;
+  }
+  .text-left-to-center {
+    text-align: center;
   }
 }
 

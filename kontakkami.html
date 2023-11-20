@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tag yang Diperlukan -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font dari Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <!-- material Icon -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- icon google -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/917733e7d4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
+    <!-- Stylesheet Eksternal -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Css Responsive -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Logo -->
+    <link rel="icon" href="assets/img/Logo.png" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Jasmine Furniture</title>
+  </head>
+  <body>
+    <!-- nmpilin gambar -->
+    <div id="show-gambar" class="container-gambar-besar hide">
+      <div
+        style="
+          width: 100%;
+          padding: 10px 20px;
+          display: flex;
+          justify-content: end;
+          height: 30px;
+        "
+      >
+        <i
+          class="material-icons"
+          onclick="handleClose()"
+          style="cursor: pointer"
+          >close</i
+        >
+      </div>
+      <div
+        style="
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <img src="/assets/img/produk/lemari1.svg" alt="" />
+      </div>
+      <div class="pb-3">
+        <a class="button-beli" id="btn-store">Go to store</a>
+      </div>
+    </div>
+
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-transparent position-fixed w-100"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img
+            src="/assets/img/Logo.png"
+            alt="Jasmine"
+            width="170.15"
+            height="50"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="/">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-bold" href="/produk.html">Produk</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="/tentang.html" class="nav-link fw-bold">Tentang</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link active fw-bold"
+                aria-current="page"
+                href="/kontakkami.html"
+                >Kontak</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Maps -->
+    <section id="maps">
+      <div class="container">
+        <div class="container px-2">
+          <div class="text-center">
+            <h2>Kontak Kami</h2>
+            <p class="px-2">
+              Jika ada pertanyaan mengenai kami, jangan sungkan untuk mengubungi
+              kami.
+            </p>
+          </div>
+
+          <div class="flex-responsif-reverse">
+            <!-- Kontainer main office dan sosial media -->
+            <div class="flex-responsif">
+              <!-- main office -->
+              <div>
+                <h6 class="text-left mb-3">Main Office</h6>
+                <div class="mb-3 d-flex align-items-center">
+                  <i class="material-icons">location_city</i
+                  ><a
+                    href="https://www.google.com/maps/place/Kota+Semarang,+Jawa+Tengah/@-7.0245522,110.3346623,12z/data=!3m1!4b1!4m6!3m5!1s0x2e708b4d3f0d024d:0x1e0432b9da5cb9f2!8m2!3d-7.0051453!4d110.4381254!16zL20vMDQ5Nm1o?entry=ttu"
+                    >Jl. Pelabuhan Kendal, Gedangan, Wonorejo, Kec. Kaliwungu,
+                    Kabupaten Kendal, Jawa Tengah
+                  </a>
+                </div>
+
+                <div class="mb-2 d-flex align-items-center">
+                  <i class="material-icons">email</i
+                  ><a href="#">Company @example.com</a>
+                </div>
+
+                <div class="mb-3 d-flex align-items-center">
+                  <i class="material-icons">local_phone</i
+                  ><a href="#">022 - 6746 -7362</a>
+                </div>
+              </div>
+
+              <!-- sosial media -->
+              <div>
+                <h6 class="text-left mb-3">Sosial Media</h6>
+                <div class="mb-3 d-flex align-items-center">
+                  <i class="fa-brands fa-tiktok h-30"></i
+                  ><a href="#">Jasmine Furniture</a>
+                </div>
+                <div class="mb-2 d-flex align-items-center">
+                  <i class="fa-brands fa-instagram h-30"></i
+                  ><a href="#">Jasmine Furniture</a>
+                </div>
+                <div class="mb-3 d-flex align-items-center">
+                  <i class="fa-brands fa-facebook fa-flip h-30"></i
+                  ><a href="#">Jasmine Furniture</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- kontainer map -->
+            <div class="border-1 d-flex align-items-center justify-content-end">
+              <div
+                class="card-maps d-flex align-items-center justify-content-center"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.662745888431!2d110.27105141095505!3d-6.930853093040069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e705fea4f7ff9e1%3A0xb478db0ea257baa5!2sPT.CBM!5e0!3m2!1sid!2sid!4v1699499223528!5m2!1sid!2sid"
+                  width="100%"
+                  height="300px"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 318">
+        <path
+          fill="#b31312"
+          fill-opacity="1"
+          d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container flex-responsif-reverse">
+        <div class="show-to-hide">
+          <img src="/assets/img/tntng.svg" style="width: 100%" />
+        </div>
+        <div style="padding-inline: 1em">
+          <!-- <div>
+            <h2 class="text-left-to-center">Kontak Kami</h2>
+            <p class="contact-kecil mb-0 text-left-to-center mb-4">
+              Jika ada pertanyaan mengenai kami, jangan sungkan untuk mengubungi
+              kami
+            </p>
+          </div> -->
+          <div>
+            <form>
+              <div class="input-text mb-4">
+                <input
+                  type="text"
+                  id="floatingInput"
+                  placeholder="Nama"
+                  class="w-100"
+                />
+              </div>
+              <div class="input-text mb-4">
+                <input
+                  type="email"
+                  id="floatingPassword"
+                  placeholder="Email"
+                  class="w-100"
+                />
+              </div>
+              <div class="input-textarea mb-4">
+                <textarea
+                  placeholder="Pesan"
+                  id="floatingTextarea2"
+                  style="height: 200px"
+                  class="w-100"
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="button-lg-secondary">Kirim</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light">
+      <div class="container d-flex justify-content-between atas py-5">
+        <div>
+          <h3>Informasi</h3>
+          <a class="d-block text-decoration-none text-light mb-2">Beranda</a>
+          <a class="d-block text-decoration-none text-light mb-2">Produk</a>
+          <a class="d-block text-decoration-none text-light mb-2">Tentang</a>
+          <a class="d-block text-decoration-none text-light mb-2">Kontak</a>
+        </div>
+        <div>
+          <h3>Lokasi Kami</h3>
+          <p class="mb-2">Kaliwungu, Kendal, Jawa Tengah</p>
+          <p class="mb-2">company@example.com</p>
+          <p class="mb-2">022 - 6746 -7362</p>
+        </div>
+        <div>
+          <h3>Ikuti Kami</h3>
+          <p class="mb-2">Instagram</p>
+          <p class="mb-2">Tiktok</p>
+          <p class="mb-2">Youtube</p>
+        </div>
+      </div>
+      <div class="container bawah py-3 border-top border-secondary">
+        <p class="text-center mb-0">
+          Copyright © by Creative Jasmine Furniture All Right Reserved
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript Opsional; Pilih salah satu dari dua berikut! -->
+
+    <!-- JS AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="js/script.js"></script>
+
+    <!-- Pilihan 1: Bootstrap Bundle dengan Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

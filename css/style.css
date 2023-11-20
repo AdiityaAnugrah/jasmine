@@ -6,6 +6,7 @@
   --tr-color: #ea906c;
   --fr-color: #141e46;
   --fv-color: #fff5e0;
+  --pr-light-color: #b31312;
 }
 
 * {
@@ -86,6 +87,27 @@ body {
   text-decoration: none;
   transition: 0.3s;
 }
+
+.button-lg-secondary {
+  padding: 10px 20px;
+  width: fit-content;
+  background-color: var(--pr-light-color);
+  /* margin-left: 20vh; */
+  border-radius: 8px;
+  font-weight: 500;
+  color: white;
+  border-style: none;
+  border: 1px solid white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.button-lg-secondary:hover {
+  color: var(--pr-color);
+  background-color: white;
+  transition: 0.5s;
+}
+
 .button-lg-primary:hover {
   color: var(--pr-color);
   background-color: #ffffff;
@@ -323,7 +345,8 @@ h2 {
 /* Maps */
 #maps {
   width: 100%;
-  padding: 5em 0;
+  padding-top: 5em;
+  /* padding: 5em 0; */
 }
 
 #maps a {
@@ -347,21 +370,26 @@ h2 {
 /* Contact */
 #contact {
   width: 100%;
+  background-color: var(--pr-light-color);
+  color: white;
 
-  background-image: url(../assets/img/kontakimage.svg);
+  /* background-image: url(../assets/img/kontakimage.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
-#contact .overlay {
-  background: rgba(0, 0, 0, 0.5);
+#contact h2 {
+  font-size: 42px;
+  font-weight: 500;
+  color: white;
 }
+
 #contact .container {
   padding: 5em 0;
 }
 
 .contact-kecil {
-  color: #fff;
+  color: var(--fv-color);
   font-size: 20px;
 }
 
@@ -370,6 +398,10 @@ h2 {
 }
 .flex-responsif-reverse > div {
   width: 50%;
+}
+
+.flex-responsif-normal {
+  display: flex;
 }
 
 .container-gambar-besar {
@@ -464,4 +496,37 @@ footer > .atas > div {
   height: 2px;
   width: 100%;
   background-color: var(--sc-color);
+}
+
+.input-text input {
+  background: none;
+  padding: 0.5em 1em;
+  color: white;
+  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+.input-text input:focus {
+  border: none;
+  border: 2px solid white;
+  outline: none;
+}
+.input-text input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.input-textarea textarea {
+  background: none;
+  padding: 0.5em 1em;
+  color: white;
+  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+.input-textarea textarea:focus {
+  border: none;
+  border: 2px solid white;
+  outline: none;
+}
+.input-textarea textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
