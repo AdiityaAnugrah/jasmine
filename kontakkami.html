@@ -52,6 +52,22 @@
     <title>Jasmine Furniture</title>
   </head>
   <body>
+    <div class="toast z-3 start-50 translate-middle">
+      <div class="toast-body">
+        <p>Hello, world! This is a toast message.</p>
+        <div class="mt-2 pt-2 border-top">
+          <a type="button" class="btn btn-danger btn-sm">Ok</a>
+          <button
+            type="button"
+            class="btn btn-secondary btn-sm"
+            onclick="hapusToast()"
+          >
+            Batal
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- nmpilin gambar -->
     <div id="show-gambar" class="container-gambar-besar hide">
       <div
@@ -144,6 +160,8 @@
               kami.
             </p>
           </div>
+
+          <button onclick="triggerToast('ini teksnya', '/')">Cek Toast</button>
 
           <div class="flex-responsif-reverse gap-5">
             <!-- Kontainer main office dan sosial media -->
@@ -241,6 +259,7 @@
                   id="floatingInput"
                   placeholder="Nama"
                   class="w-100"
+                  name="nama"
                 />
               </div>
               <div class="input-text mb-4">
@@ -249,6 +268,7 @@
                   id="floatingPassword"
                   placeholder="Email"
                   class="w-100"
+                  name="email"
                 />
               </div>
               <div class="input-textarea mb-4">
@@ -257,6 +277,7 @@
                   id="floatingTextarea2"
                   style="height: 200px"
                   class="w-100"
+                  name="pesan"
                 ></textarea>
               </div>
               <div class="text-center">
@@ -347,6 +368,7 @@
     </script>
 
     <script src="js/script.js"></script>
+    <script src="js/kontak.js"></script>
 
     <!-- Pilihan 1: Bootstrap Bundle dengan Popper -->
     <script

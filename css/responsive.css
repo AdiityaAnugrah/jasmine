@@ -125,6 +125,9 @@
     background-color: #b31312;
     transition: 0.5s;
   }
+  .w-50-to-100 {
+    width: 100%;
+  }
 }
 
 /* Responsif untuk layar dengan lebar maksimum 350px */

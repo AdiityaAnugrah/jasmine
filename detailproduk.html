@@ -21,7 +21,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <title>Produk | Jasmine Furniture</title>
+    <title>Detail Produk | Jasmine Furniture</title>
   </head>
   <body>
     <nav
@@ -71,172 +71,27 @@
       </div>
     </nav>
 
-    <!-- Header -->
     <section class="margin-navbar"></section>
-    <div class="mb-4 header-gambar">
-      <h1 class="text-header">Kategori Produk</h1>
-    </div>
 
-    <div
-      class="container flex-responsif-reverse mb-5 gap-2 justify-content-center"
-    >
-      <div class="hide-to-show-block mb-3">
-        <input
-          type="checkbox"
-          name="kategori"
-          id="kategori"
-          style="display: none"
-        />
-        <label
-          for="kategori"
-          class="button-lg-primary text-center"
+    <div class="flex-responsif-normal gap-4 py-5 container">
+      <div class="w-50-to-100">
+        <img
+          id="gambarBarang"
+          src="/assets/img/produk/meja_besi.webp"
           style="width: 100%"
-          >pilih Kategori</label
-        >
-        <div class="kategori-cek">
-          <a href="/produk.html" class="text-center produk-list fw-bold"
-            >Semua Produk</a
-          >
-          <a
-            href="/produk.html?kategori=lemari"
-            class="text-center produk-list fw-bold"
-            >Lemari</a
-          >
-          <a
-            href="/produk.html?subkategori=lemari-dewasa"
-            class="text-center produk-list"
-            >Lemari Dewasa</a
-          >
-          <a
-            href="/produk.html?subkategori=lemari-anak"
-            class="text-center produk-list"
-            >Lemari Anak</a
-          >
-          <a
-            href="/produk.html?subkategori=lemari-hias"
-            class="text-center produk-list"
-            >Lemari Hias</a
-          >
-          <a
-            href="/produk.html?kategori=meja"
-            class="text-center produk-list fw-bold"
-            >Meja</a
-          >
-          <a
-            href="/produk.html?subkategori=meja-belajar"
-            class="text-center produk-list"
-            >Meja Belajar</a
-          >
-          <a
-            href="/produk.html?subkategori=meja-rias"
-            class="text-center produk-list"
-            >Meja Rias</a
-          >
-          <a
-            href="/produk.html?subkategori=meja-tulis"
-            class="text-center produk-list"
-            >Meja Tulis</a
-          >
-          <a
-            href="/produk.html?kategori=rak"
-            class="text-center produk-list fw-bold"
-            >Rak</a
-          >
-          <a
-            href="/produk.html?subkategori=rak-sepatu"
-            class="text-center produk-list"
-            >Rak Sepatu</a
-          >
-          <a
-            href="/produk.html?subkategori=rak-serbaguna"
-            class="text-center produk-list"
-            >Rak Serbaguna</a
-          >
-          <a
-            href="/produk.html?kategori=kursi"
-            class="text-center produk-list fw-bold"
-            >Kursi</a
-          >
-        </div>
+          alt=""
+        />
       </div>
-      <div style="flex: 1" class="show-to-hide">
-        <a href="/produk.html" class="text-center produk-list fw-bold"
-          >Semua Produk</a
-        >
-        <a
-          href="/produk.html?kategori=lemari"
-          class="text-center produk-list fw-bold"
-          >Lemari</a
-        >
-        <a
-          href="/produk.html?subkategori=lemari-dewasa"
-          class="text-center produk-list"
-          >Lemari Dewasa</a
-        >
-        <a
-          href="/produk.html?subkategori=lemari-anak"
-          class="text-center produk-list"
-          >Lemari Anak</a
-        >
-        <a
-          href="/produk.html?subkategori=lemari-hias"
-          class="text-center produk-list"
-          >Lemari Hias</a
-        >
-        <a
-          href="/produk.html?kategori=meja"
-          class="text-center produk-list fw-bold"
-          >Meja</a
-        >
-        <a
-          href="/produk.html?subkategori=meja-belajar"
-          class="text-center produk-list"
-          >Meja Belajar</a
-        >
-        <a
-          href="/produk.html?subkategori=meja-rias"
-          class="text-center produk-list"
-          >Meja Rias</a
-        >
-        <a
-          href="/produk.html?subkategori=meja-tulis"
-          class="text-center produk-list"
-          >Meja Tulis</a
-        >
-        <a
-          href="/produk.html?kategori=rak"
-          class="text-center produk-list fw-bold"
-          >Rak</a
-        >
-        <a
-          href="/produk.html?subkategori=rak-sepatu"
-          class="text-center produk-list"
-          >Rak Sepatu</a
-        >
-        <a
-          href="/produk.html?subkategori=rak-serbaguna"
-          class="text-center produk-list"
-          >Rak Serbaguna</a
-        >
-        <a
-          href="/produk.html?kategori=kursi"
-          class="text-center produk-list fw-bold"
-          >Kursi</a
-        >
-      </div>
-      <div
-        class="d-flex gap-3 flex-wrap"
-        style="flex: 3"
-        id="container-card-produk"
-      >
-        <!-- <a class="card-produk">
-          <div>
-            <img src="assets/img/produk/RSG 10 SAMPING KIRI.webp" />
-          </div>
-          <h3 class="mb-0">
-            Lemari MDF 12 x 3 x 50 - Lemari Serbaguna / Lemari Baju Rak Tinggi
-          </h3>
-        </a> -->
+      <div class="w-50-to-100">
+        <h1 id="namaBarang">Meja Kayu MDF</h1>
+        <p id="kategoriBarang">Kategori :</p>
+
+        <h3 style="color: var(--pr-light-color)">Deskripsi</h3>
+        <p id="deskripsiBarang">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, ab
+          excepturi. Libero at molestiae non vitae nobis velit natus facilis
+          illum iure totam? Sunt officia omnis minus id voluptatum consequatur.
+        </p>
       </div>
     </div>
 
@@ -310,7 +165,7 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
-    <script src="js/produk.js"></script>
+    <script src="js/detailproduk.js"></script>
     <!-- Pilihan 1: Bootstrap Bundle dengan Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

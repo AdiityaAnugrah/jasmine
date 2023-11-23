@@ -18,6 +18,20 @@ body {
   background: #a8a6a6;
 }
 
+.toast {
+  position: fixed;
+  top: -60px;
+  transition: 1s;
+}
+.toast.show {
+  top: 200px;
+  transition: 1s;
+}
+
+.w-50-to-100 {
+  width: 50%;
+}
+
 .hide-to-show-block {
   display: none;
 }

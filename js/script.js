@@ -40,3 +40,16 @@ function bukaDropdown(id) {
     elementDropdown.style.height = "100%";
   }
 }
+
+const toastElm = document.querySelector(".toast");
+const toastTeksElm = document.querySelector(".toast p");
+const toastOkElm = document.querySelector(".toast a");
+
+function triggerToast(text, linkAction) {
+  toastElm.classList.add("show");
+  toastTeksElm.innerHTML = text;
+  toastOkElm.href = linkAction;
+}
+function hapusToast() {
+  toastElm.classList.remove("show");
+}
