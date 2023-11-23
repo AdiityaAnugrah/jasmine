@@ -86,7 +86,7 @@
     </div>
 
     <nav
-      class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-transparent position-fixed w-100"
+      class="navbar navbar-expand-lg bg-body-tertiary navbar-light nav-color position-fixed w-100"
     >
       <div class="container">
         <a class="navbar-brand" href="/">
@@ -110,7 +110,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+            <li class="nav-item mx-2">
               <a class="nav-link fw-bold" href="/">Home</a>
             </li>
             <li class="nav-item mx-2">
@@ -133,25 +133,26 @@
     </nav>
 
     <!-- Maps -->
+    <section class="margin-navbar"></section>
     <section id="maps">
       <div class="container">
         <div class="container px-2">
           <div class="text-center mt-4">
             <h2>Kontak Kami</h2>
-            <p class="px-2">
+            <p class="px-2 pb-3">
               Jika ada pertanyaan mengenai kami, jangan sungkan untuk mengubungi
               kami.
             </p>
           </div>
 
-          <div class="flex-responsif-reverse">
+          <div class="flex-responsif-reverse gap-5">
             <!-- Kontainer main office dan sosial media -->
             <div class="flex-responsif">
               <!-- main office -->
               <div>
                 <h6 class="text-left mb-3">Main Office</h6>
                 <div class="mb-3 d-flex align-items-center">
-                  <i class="material-icons">location_city</i
+                  <i class="material-icons me-2">location_city</i
                   ><a
                     href="https://www.google.com/maps/place/Kota+Semarang,+Jawa+Tengah/@-7.0245522,110.3346623,12z/data=!3m1!4b1!4m6!3m5!1s0x2e708b4d3f0d024d:0x1e0432b9da5cb9f2!8m2!3d-7.0051453!4d110.4381254!16zL20vMDQ5Nm1o?entry=ttu"
                     >Jl. Pelabuhan Kendal, Gedangan, Wonorejo, Kec. Kaliwungu,
@@ -160,12 +161,12 @@
                 </div>
 
                 <div class="mb-2 d-flex align-items-center">
-                  <i class="material-icons">email</i
+                  <i class="material-icons me-2">email</i
                   ><a href="#">Company @example.com</a>
                 </div>
 
                 <div class="mb-3 d-flex align-items-center">
-                  <i class="material-icons">local_phone</i
+                  <i class="material-icons me-2">local_phone</i
                   ><a href="#">022 - 6746 -7362</a>
                 </div>
               </div>
@@ -174,15 +175,15 @@
               <div>
                 <h6 class="text-left mb-3">Sosial Media</h6>
                 <div class="mb-3 d-flex align-items-center">
-                  <i class="fa-brands fa-tiktok h-30"></i
+                  <i class="fa-brands fa-tiktok me-2"></i
                   ><a href="#">Jasmine Furniture</a>
                 </div>
                 <div class="mb-2 d-flex align-items-center">
-                  <i class="fa-brands fa-instagram h-30"></i
+                  <i class="fa-brands fa-instagram me-2"></i
                   ><a href="#">Jasmine Furniture</a>
                 </div>
                 <div class="mb-3 d-flex align-items-center">
-                  <i class="fa-brands fa-facebook fa-flip h-30"></i
+                  <i class="fa-brands fa-facebook me-2"></i
                   ><a href="#">Jasmine Furniture</a>
                 </div>
               </div>
@@ -269,25 +270,65 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-light">
-      <div class="container d-flex justify-content-between atas py-5">
-        <div>
-          <h3>Informasi</h3>
+      <div class="container flex-responsif-normal atas py-5">
+        <div class="show-to-hide">
+          <h3>Menu</h3>
           <a class="d-block text-decoration-none text-light mb-2">Beranda</a>
           <a class="d-block text-decoration-none text-light mb-2">Produk</a>
           <a class="d-block text-decoration-none text-light mb-2">Tentang</a>
           <a class="d-block text-decoration-none text-light mb-2">Kontak</a>
         </div>
-        <div>
-          <h3>Lokasi Kami</h3>
+        <div class="show-to-hide">
+          <h3>Informasi Kami</h3>
           <p class="mb-2">Kaliwungu, Kendal, Jawa Tengah</p>
           <p class="mb-2">company@example.com</p>
           <p class="mb-2">022 - 6746 -7362</p>
         </div>
-        <div>
+        <div class="show-to-hide">
           <h3>Ikuti Kami</h3>
           <p class="mb-2">Instagram</p>
           <p class="mb-2">Tiktok</p>
           <p class="mb-2">Youtube</p>
+        </div>
+
+        <div class="hide-to-show-block">
+          <div
+            class="d-flex justify-content-between align-items-center"
+            onclick="bukaDropdown('container-menu')"
+          >
+            <h3>Menu</h3>
+            <i class="material-icons">expand_more</i>
+          </div>
+          <div class="dropdown-footer" id="container-menu">
+            <a href="">Home</a>
+            <a href="">Produk</a>
+            <a href="">Tentang</a>
+            <a href="">Kontak</a>
+          </div>
+          <div
+            class="d-flex justify-content-between align-items-center"
+            onclick="bukaDropdown('container-informasi')"
+          >
+            <h3>Informasi Kami</h3>
+            <i class="material-icons">expand_more</i>
+          </div>
+          <div class="dropdown-footer" id="container-informasi">
+            <a href="">Kaliwungu, Kendal, Jawa tengah</a>
+            <a href="">Company@gmail.com</a>
+            <a href="">022-6746-7362</a>
+          </div>
+          <h3>Ikuti Kami</h3>
+          <div class="d-flex gap-4 mt-4">
+            <a href="" class="text-decoration-none text-light">
+              <i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="" class="text-decoration-none text-light">
+              <i class="fa-brands fa-tiktok"></i
+            ></a>
+            <a href="" class="text-decoration-none text-light">
+              <i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
         </div>
       </div>
       <div class="container bawah py-3 border-top border-secondary">

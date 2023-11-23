@@ -24,8 +24,6 @@
     width: 80%;
   }
   .img-hero {
-    /* width: 70%;
-    height: auto; */
     display: none;
   }
   h2 {
@@ -63,9 +61,9 @@
     height: 40px !important;
     width: 30%;
   }
-  #produk img {
+  /* #produk img {
     width: 50vw;
-  }
+  } */
   /* resopnsif utk main office dan sosmed */
   .flex-responsif {
     display: flex;
@@ -96,6 +94,36 @@
   }
   .text-left-to-center {
     text-align: center;
+  }
+
+  .card-kategori .card-kategori-item {
+    height: fit-content;
+  }
+  .card-kategori:hover .card-kategori-item {
+    height: fit-content;
+  }
+  .card-kategori-item a {
+    color: black;
+    display: block;
+    width: fit-content;
+  }
+  .card-kategori img {
+    width: 100%;
+    aspect-ratio: 1 /1;
+  }
+
+  .hide-to-show-block {
+    display: block;
+  }
+
+  /* produk */
+  .card-produk {
+    flex: 1 0 150px;
+  }
+  .button-lg-primary:hover {
+    color: white;
+    background-color: #b31312;
+    transition: 0.5s;
   }
 }
 

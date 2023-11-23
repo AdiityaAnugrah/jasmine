@@ -7,6 +7,7 @@
   --fr-color: #141e46;
   --fv-color: #fff5e0;
   --pr-light-color: #b31312;
+  --card-produk-color: rgb(239, 239, 239);
 }
 
 * {
@@ -15,6 +16,20 @@
 body {
   background-color: #929292;
   background: #a8a6a6;
+}
+
+.hide-to-show-block {
+  display: none;
+}
+
+.margin-navbar {
+  display: block;
+  height: 76px;
+}
+
+.fa-brands {
+  display: block;
+  font-size: 1em;
 }
 
 /* navbar color */
@@ -43,7 +58,7 @@ body {
 /* Hero section */
 
 #hero {
-  padding-top: 5em;
+  padding-top: 8em;
   background: linear-gradient(160deg, var(--sc-color), #fff);
   height: fit-content;
   width: 100%;
@@ -234,76 +249,6 @@ h2 {
   z-index: -1;
 }
 
-/* Search  */
-/* #search {
-  background: url(../assets/img/searchgambar.png),
-    lightgray 50% / cover no-repeat;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#search h2 {
-  color: #b31312;
-  text-align: center;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-#search p {
-  color: #000;
-  text-align: center;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.input-cari {
-  display: flex;
-}
-
-.input-cari:focus {
-  border: none;
-}
-
-.input-cari .button-secondary {
-  width: 200px;
-  height: 60px;
-  background-size: rgba(255, 255, 255, 0.8);
-  color: var(--pr-color);
-  font-size: 18px;
-  padding: 0;
-  font-weight: 500;
-  border-radius: 5px;
-  border: none;
-}
-
-.input-cari .button-primary {
-  height: 60px;
-  border-radius: 5px;
-  border: none;
-  background-color: var(--pr-color);
-  color: white;
-  font-size: 24px;
-  font-weight: 500;
-}
-
-.material-icons {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  height: 30px;
-  width: 30px;
-}
-.fa-brands {
-  display: inline-block;
-  margin: 0;
-  padding: 5px;
-} */
-
 /* Produk Kami */
 #produk {
   background: whitesmoke;
@@ -313,39 +258,34 @@ h2 {
 }
 
 .card-produk {
-  background-color: white;
-  border-radius: 5px;
-  padding: 1em;
+  flex: 1 0 200px;
+  text-decoration: none;
 }
-
 .card-produk img {
   width: 100%;
-  height: 100%;
+  margin-bottom: 1em;
+}
+.card-produk h3 {
+  color: black;
+  font-size: medium;
+}
+.produk-list {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  display: block;
+  line-height: 2.5em;
 }
 
-.card-body h4 {
-  color: #000;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.card-produk:hover {
-  background-color: #b31312;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, alpha);
-  transition: all 0.3s ease-in;
-}
-
-.card-produk:hover .card-body h4 {
-  color: #fff;
-  transition: all 0.2s ease-in;
+.produk-list:hover {
+  color: white;
+  background-color: black;
 }
 
 /* Maps */
 #maps {
   width: 100%;
-  padding-top: 5em;
+  padding-top: 1em;
   /* padding: 5em 0; */
 }
 
@@ -449,25 +389,66 @@ footer > .atas > div {
   width: 100%;
 }
 
-.card-kategori {
-  padding: 1em;
-  width: 230px;
-  background-color: whitesmoke;
-  text-decoration: none;
-  border-radius: 5px;
+.dropdown-footer {
+  height: 0;
+  overflow-y: hidden;
+  margin-bottom: 1em;
   transition: 0.3s;
+}
+.dropdown-footer a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  line-height: 2.5em;
+}
+
+.card-kategori {
+  width: 50%;
+  background-color: var(--card-produk-color);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  height: 250px;
+  justify-content: space-between;
+  padding: 2em;
+  align-items: center;
+}
+
+.card-kategori > div {
+  width: 50%;
+}
+
+.card-kategori a {
+  text-decoration: none;
+  color: white;
+  margin-right: 1em;
   cursor: pointer;
 }
-.card-kategori h3 {
-  color: #141e46;
-  font-size: large;
+.card-kategori a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid black;
+  color: black;
+  margin-right: 1em;
 }
+
 .card-kategori img {
-  width: 100%;
-  margin-bottom: 1em;
+  width: 220px;
+  height: 50%;
+  border-radius: 5px;
+  float: right;
 }
+
 .card-kategori:hover {
-  background-color: var(--pr-color);
+  background-color: var(--tr-color);
+  transition: 0.3s;
+}
+
+.card-kategori .card-kategori-item {
+  height: 0;
+  overflow-y: hidden;
+  transition: 0.3s;
+}
+.card-kategori:hover .card-kategori-item {
+  height: 30px;
   transition: 0.3s;
 }
 
@@ -530,4 +511,17 @@ footer > .atas > div {
 }
 .input-textarea textarea::placeholder {
   color: rgba(255, 255, 255, 0.5);
+}
+
+/* Produk.html */
+
+.kategori-cek {
+  height: 0;
+  overflow-y: hidden;
+  transition: 0.3s;
+}
+
+#kategori:checked ~ .kategori-cek {
+  height: 32.5em;
+  transition: 0.3s;
 }

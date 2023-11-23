@@ -25,7 +25,7 @@
   </head>
   <body>
     <nav
-      class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-transparent position-fixed w-100"
+      class="navbar navbar-expand-lg bg-body-tertiary navbar-light nav-color position-fixed w-100"
     >
       <div class="container">
         <a class="navbar-brand" href="/">
@@ -72,84 +72,135 @@
     </nav>
 
     <!-- Header -->
-    <div class="mb-5">
-      <img src="assets/img/header-produk.webp" width="100%" />
+    <section class="margin-navbar"></section>
+    <div class="mb-4 header-gambar">
+      <h1 class="text-header">Kategori Produk</h1>
     </div>
 
-    <div class="container d-flex mb-5 gap-2 justify-content-center">
-      <div style="width: 25%">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Meja</li>
-          <li class="list-group-item">Kursi</li>
-          <li class="list-group-item">Rak</li>
-          <li class="list-group-item">Lemari</li>
-        </ul>
+    <div
+      class="container flex-responsif-reverse mb-5 gap-2 justify-content-center"
+    >
+      <div class="hide-to-show-block mb-3">
+        <input
+          type="checkbox"
+          name="kategori"
+          id="kategori"
+          style="display: none"
+        />
+        <label
+          for="kategori"
+          class="button-lg-primary text-center"
+          style="width: 100%"
+          >pilih Kategori</label
+        >
+        <div class="kategori-cek">
+          <a href="" class="text-center produk-list fw-bold">Semua Produk</a>
+          <a href="" class="text-center produk-list fw-bold">Lemari</a>
+          <a href="" class="text-center produk-list">Lemari Dewasa</a>
+          <a href="" class="text-center produk-list">Lemari Anak</a>
+          <a href="" class="text-center produk-list">Lemari Hias</a>
+          <a href="" class="text-center produk-list fw-bold">Meja</a>
+          <a href="" class="text-center produk-list">Meja Belajar</a>
+          <a href="" class="text-center produk-list">Meja Rias</a>
+          <a href="" class="text-center produk-list">Meja Tulis</a>
+          <a href="" class="text-center produk-list fw-bold">Rak</a>
+          <a href="" class="text-center produk-list">Rak Sepatu</a>
+          <a href="" class="text-center produk-list">Rak Serbaguna</a>
+          <a href="" class="text-center produk-list fw-bold">Kursi</a>
+        </div>
       </div>
-      <div class="d-flex gap-2 flex-wrap">
-        <a class="card-kategori">
+      <div style="flex: 1" class="show-to-hide">
+        <a href="" class="produk-list fw-bold">Semua Produk</a>
+        <a href="" class="produk-list fw-bold">Lemari</a>
+        <a href="" class="produk-list">Lemari Dewasa</a>
+        <a href="" class="produk-list">Lemari Anak</a>
+        <a href="" class="produk-list">Lemari Hias</a>
+        <a href="" class="produk-list fw-bold">Meja</a>
+        <a href="" class="produk-list">Meja Belajar</a>
+        <a href="" class="produk-list">Meja Rias</a>
+        <a href="" class="produk-list">Meja Tulis</a>
+        <a href="" class="produk-list fw-bold">Rak</a>
+        <a href="" class="produk-list">Rak Sepatu</a>
+        <a href="" class="produk-list">Rak Serbaguna</a>
+        <a href="" class="produk-list fw-bold">Kursi</a>
+      </div>
+      <div
+        class="d-flex gap-3 flex-wrap"
+        style="flex: 3"
+        id="container-card-produk"
+      >
+        <!-- <a class="card-produk">
           <div>
-            <img src="assets/img/produk/lemari1.svg" />
+            <img src="assets/img/produk/RSG 10 SAMPING KIRI.webp" />
           </div>
           <h3 class="mb-0">
             Lemari MDF 12 x 3 x 50 - Lemari Serbaguna / Lemari Baju Rak Tinggi
           </h3>
-        </a>
-        <a class="card-kategori">
-          <div>
-            <img src="assets/img/produk/lemari1.svg" />
-          </div>
-          <h3 class="mb-0">
-            Lemari MDF 12 x 3 x 50 - Lemari Serbaguna / Lemari Baju Rak Tinggi
-          </h3>
-        </a>
-        <a class="card-kategori">
-          <div>
-            <img src="assets/img/produk/lemari1.svg" />
-          </div>
-          <h3 class="mb-0">
-            Lemari MDF 12 x 3 x 50 - Lemari Serbaguna / Lemari Baju Rak Tinggi
-          </h3>
-        </a>
-        <a class="card-kategori">
-          <div>
-            <img src="assets/img/produk/lemari1.svg" />
-          </div>
-          <h3 class="mb-0">
-            Lemari MDF 12 x 3 x 50 - Lemari Serbaguna / Lemari Baju Rak Tinggi
-          </h3>
-        </a>
-        <a class="card-kategori">
-          <div>
-            <img src="assets/img/produk/lemari1.svg" />
-          </div>
-          <h3 class="mb-0">
-            Lemari MDF 12 x 3 x 50 - Lemari Serbaguna / Lemari Baju Rak Tinggi
-          </h3>
-        </a>
+        </a> -->
       </div>
     </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-light">
-      <div class="container d-flex justify-content-between atas py-5">
-        <div>
-          <h3>Informasi</h3>
+      <div class="container flex-responsif-normal atas py-5">
+        <div class="show-to-hide">
+          <h3>Menu</h3>
           <a class="d-block text-decoration-none text-light mb-2">Beranda</a>
           <a class="d-block text-decoration-none text-light mb-2">Produk</a>
           <a class="d-block text-decoration-none text-light mb-2">Tentang</a>
           <a class="d-block text-decoration-none text-light mb-2">Kontak</a>
         </div>
-        <div>
-          <h3>Lokasi Kami</h3>
+        <div class="show-to-hide">
+          <h3>Informasi Kami</h3>
           <p class="mb-2">Kaliwungu, Kendal, Jawa Tengah</p>
           <p class="mb-2">company@example.com</p>
           <p class="mb-2">022 - 6746 -7362</p>
         </div>
-        <div>
+        <div class="show-to-hide">
           <h3>Ikuti Kami</h3>
           <p class="mb-2">Instagram</p>
           <p class="mb-2">Tiktok</p>
           <p class="mb-2">Youtube</p>
+        </div>
+
+        <div class="hide-to-show-block">
+          <div
+            class="d-flex justify-content-between align-items-center"
+            onclick="bukaDropdown('container-menu')"
+          >
+            <h3>Menu</h3>
+            <i class="material-icons">expand_more</i>
+          </div>
+          <div class="dropdown-footer" id="container-menu">
+            <a href="">Home</a>
+            <a href="">Produk</a>
+            <a href="">Tentang</a>
+            <a href="">Kontak</a>
+          </div>
+          <div
+            class="d-flex justify-content-between align-items-center"
+            onclick="bukaDropdown('container-informasi')"
+          >
+            <h3>Informasi Kami</h3>
+            <i class="material-icons">expand_more</i>
+          </div>
+          <div class="dropdown-footer" id="container-informasi">
+            <a href="">Kaliwungu, Kendal, Jawa tengah</a>
+            <a href="">Company@gmail.com</a>
+            <a href="">022-6746-7362</a>
+          </div>
+          <h3>Ikuti Kami</h3>
+          <div class="d-flex gap-4 mt-4">
+            <a href="" class="text-decoration-none text-light">
+              <i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="" class="text-decoration-none text-light">
+              <i class="fa-brands fa-tiktok"></i
+            ></a>
+            <a href="" class="text-decoration-none text-light">
+              <i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
         </div>
       </div>
       <div class="container bawah py-3 border-top border-secondary">
@@ -158,8 +209,8 @@
         </p>
       </div>
     </footer>
-
     <script src="js/script.js"></script>
+    <script src="js/produk.js"></script>
     <!-- Pilihan 1: Bootstrap Bundle dengan Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

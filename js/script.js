@@ -1,12 +1,12 @@
-const navbar = document.getElementsByTagName("nav")[0];
-window.addEventListener("scroll", function () {
-  console.log(window.scrollY);
-  if (this.window.scrollY > 1) {
-    navbar.classList.replace("bg-transparent", "nav-color");
-  } else if ((this.window, this.scrollY <= 0)) {
-    navbar.classList.replace("nav-color", "bg-transparent");
-  }
-});
+// const navbar = document.getElementsByTagName("nav")[0];
+// window.addEventListener("scroll", function () {
+//   console.log(window.scrollY);
+//   if (this.window.scrollY > 1) {
+//     navbar.classList.replace("bg-transparent", "nav-color");
+//   } else if ((this.window, this.scrollY <= 0)) {
+//     navbar.classList.replace("nav-color", "bg-transparent");
+//   }
+// });
 
 const burgerNav = document.querySelector(".navbar-toggler");
 burgerNav.addEventListener("click", () => {
@@ -30,4 +30,13 @@ function handleProduk(nama) {
 
 function handleClose() {
   elmKontainerGmbr.classList.add("hide");
+}
+
+function bukaDropdown(id) {
+  const elementDropdown = document.getElementById(id);
+  if (elementDropdown.style.height == "100%") {
+    elementDropdown.style.height = "0";
+  } else {
+    elementDropdown.style.height = "100%";
+  }
 }
