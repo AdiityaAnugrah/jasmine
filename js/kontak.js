@@ -18,7 +18,7 @@ elmForm.addEventListener("submit", (e) => {
     }
     formBody = formBody.join("&");
 
-    const response = await fetch("http://192.168.1.7:8080/kontak", {
+    const response = await fetch("http://192.168.1.7:8082/kontak", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",

@@ -8,16 +8,16 @@ async function getAllBarang() {
   let barangs;
   if (kategori) {
     const response = await fetch(
-      "http://192.168.1.7:8080/kategori/" + kategori
+      "http://192.168.1.7:8082/kategori/" + kategori
     );
     barangs = await response.json();
   } else if (subkategori) {
     const response = await fetch(
-      "http://192.168.1.7:8080/subkategori/" + subkategori
+      "http://192.168.1.7:8082/subkategori/" + subkategori
     );
     barangs = await response.json();
   } else {
-    const response = await fetch("http://192.168.1.7:8080/getallbarang");
+    const response = await fetch("http://192.168.1.7:8082/getallbarang");
     barangs = await response.json();
   }
 
