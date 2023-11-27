@@ -8,6 +8,10 @@
 //   }
 // });
 
+const navContent = document.getElementById("navbar-content");
+navContent.innerHTML =
+  '<object width="100%" type="text/html" data="navbar.html"</object>';
+
 const burgerNav = document.querySelector(".navbar-toggler");
 burgerNav.addEventListener("click", () => {
   if (navbar.classList.contains("bg-transparent")) {
