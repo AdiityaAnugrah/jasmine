@@ -1,3 +1,4 @@
+const elmBeli = document.getElementById("btnBeli");
 const elmNama = document.getElementById("namaBarang");
 const elmGambar = document.getElementById("gambarBarang");
 const elmDeskrip = document.getElementById("deskripsiBarang");
@@ -17,6 +18,7 @@ async function getBarang() {
   const blobUrl = URL.createObjectURL(blob);
   elmGambar.src = blobUrl;
   elmNama.innerText = barang.data[0].nama;
+  elmBeli.href = "http://192.168.1.7:8080/product/" + barang.data[0].id;
   elmDeskrip.innerText = barang.data[0].deskripsi;
   elmKategori.innerText =
     "Kategori : " +

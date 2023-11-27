@@ -28,6 +28,7 @@
       src="https://kit.fontawesome.com/917733e7d4.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <!-- AOS -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
@@ -66,6 +67,22 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript> -->
   </head>
   <body>
+    <div class="toast z-3 start-50 translate-middle">
+      <div class="toast-body">
+        <p>Hello, world! This is a toast message.</p>
+        <div class="mt-2 pt-2 border-top">
+          <a type="button" class="btn btn-danger btn-sm" hidden>Ok</a>
+          <button
+            type="button"
+            class="btn btn-secondary btn-sm"
+            onclick="hapusToast()"
+          >
+            Ok
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- nmpilin gambar -->
     <div id="show-gambar" class="container-gambar-besar hide">
       <div
@@ -123,7 +140,18 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+          <form class="d-flex mx-auto" role="search" id="search-box">
+            <input
+              id="search-input"
+              class="form-control me-2"
+              type="search"
+              placeholder="cari produk"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-dark" type="submit">Cari</button>
+          </form>
+
+          <ul class="navbar-nav">
             <li class="nav-item mx-2">
               <a class="nav-link active fw-bold" aria-current="page" href="/"
                 >Home</a
@@ -244,9 +272,15 @@
             <div>
               <h1>Meja</h1>
               <div class="card-kategori-item">
-                <a class="mb-0">Meja Belajar</a>
-                <a class="mb-0">Meja Rias</a>
-                <a class="mb-0">Meja Tulis</a>
+                <a href="/produk.html?subkategori=meja-belajar" class="mb-0"
+                  >Meja Belajar</a
+                >
+                <a href="/produk.html?subkategori=meja-rias" class="mb-0"
+                  >Meja Rias</a
+                >
+                <a href="/produk.html?subkategori=meja-tulis" class="mb-0"
+                  >Meja Tulis</a
+                >
               </div>
             </div>
             <div>
@@ -257,9 +291,15 @@
             <div>
               <h1>Lemari</h1>
               <div class="card-kategori-item">
-                <a class="mb-0">Lemari Dewasa</a>
-                <a class="mb-0">Lemari Anak-anak</a>
-                <a class="mb-0">Lemari Hias</a>
+                <a href="/produk.html?subkategori=lemari-dewasa" class="mb-0"
+                  >Lemari Dewasa</a
+                >
+                <a href="/produk.html?subkategori=lemari-anak" class="mb-0"
+                  >Lemari Anak-anak</a
+                >
+                <a href="/produk.html?subkategori=lemari-hias" class="mb-0"
+                  >Lemari Hias</a
+                >
               </div>
             </div>
             <div>
@@ -275,8 +315,12 @@
             <div>
               <h1>Rak</h1>
               <div class="card-kategori-item">
-                <a class="mb-0">Rak Sepatu</a>
-                <a class="mb-0">Rak Serbaguna</a>
+                <a href="/produk.html?subkategori=rak-sepatu" class="mb-0"
+                  >Rak Sepatu</a
+                >
+                <a href="/produk.html?subkategori=rak-serbaguna" class="mb-0"
+                  >Rak Serbaguna</a
+                >
               </div>
             </div>
             <div>
@@ -287,7 +331,9 @@
             <div>
               <h1>Kursi</h1>
               <div class="card-kategori-item">
-                <a class="mb-0">Kursi Besi</a>
+                <a href="/produk.html?kategori=kursi" class="mb-0"
+                  >Kursi Besi</a
+                >
               </div>
             </div>
             <div>
@@ -395,13 +441,15 @@
             </p>
           </div>
           <div>
-            <form>
+            <form id="form-kontak">
               <div class="input-text mb-4">
                 <input
                   type="text"
                   id="floatingInput"
                   placeholder="Nama"
                   class="w-100"
+                  name="nama"
+                  required
                 />
               </div>
               <div class="input-text mb-4">
@@ -410,6 +458,28 @@
                   id="floatingPassword"
                   placeholder="Email"
                   class="w-100"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="input-text mb-4">
+                <input
+                  type="text"
+                  id="floatingPassword"
+                  placeholder="Alamat"
+                  class="w-100"
+                  name="alamat"
+                  required
+                />
+              </div>
+              <div class="input-text mb-4">
+                <input
+                  type="number"
+                  id="floatingPassword"
+                  placeholder="Nomor Hp"
+                  class="w-100"
+                  name="nohp"
+                  required
                 />
               </div>
               <div class="input-textarea mb-4">
@@ -418,6 +488,8 @@
                   id="floatingTextarea2"
                   style="height: 200px"
                   class="w-100"
+                  name="pesan"
+                  required
                 ></textarea>
               </div>
               <div class="text-center">
@@ -522,6 +594,7 @@
     </script>
 
     <script src="js/script.js"></script>
+    <script src="js/kontak.js"></script>
 
     <!-- Pilihan 1: Bootstrap Bundle dengan Popper -->
     <script

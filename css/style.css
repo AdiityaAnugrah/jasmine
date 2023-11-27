@@ -349,6 +349,7 @@ h2 {
 
 .flex-responsif-reverse {
   display: flex;
+  gap: 3em;
 }
 .flex-responsif-reverse > div {
   width: 50%;

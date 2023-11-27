@@ -84,7 +84,8 @@
 
   /* resopnsif reverse utk main office-sosmed dan map*/
   .flex-responsif-reverse {
-    display: block;
+    flex-direction: column;
+    gap: 2em;
   }
   .flex-responsif-reverse > div {
     width: 100%;
