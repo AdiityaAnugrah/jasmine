@@ -1,542 +1,565 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 :root {
-  --pr-color: #b31312;
-  --sc-color: #848484;
-  --tr-color: #ea906c;
-  --fr-color: #141e46;
-  --fv-color: #fff5e0;
-  --pr-light-color: #b31312;
-  --card-produk-color: rgb(239, 239, 239);
+    --pr-color: #b31312;
+    --sc-color: #848484;
+    --tr-color: #ea906c;
+    --fr-color: #141e46;
+    --fv-color: #fff5e0;
+    --pr-light-color: #b31312;
+    --card-produk-color: rgb(239, 239, 239);
 }
 
 * {
-  font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 body {
-  background-color: #929292;
-  background: #a8a6a6;
+    background-color: #929292;
+    background: #a8a6a6;
 }
 
 .toast {
-  position: fixed;
-  top: -60px;
-  transition: 1s;
+    position: fixed;
+    top: -60px;
+    transition: 1s;
 }
 .toast.show {
-  top: 200px;
-  transition: 1s;
+    top: 200px;
+    transition: 1s;
 }
 
 .w-50-to-100 {
-  width: 50%;
+    width: 50%;
 }
 
 .hide-to-show-block {
-  display: none;
+    display: none;
 }
 
 .margin-navbar {
-  display: block;
-  height: 76px;
+    display: block;
+    height: 76px;
 }
 
 .fa-brands {
-  display: block;
-  font-size: 1em;
+    display: block;
+    font-size: 1em;
 }
 
 /* navbar color */
 .nav-color {
-  background-color: whitesmoke;
-  transition: all-ease-in-out 0.5s;
+    background-color: whitesmoke;
+    transition: all-ease-in-out 0.5s;
 }
 /* navbar */
 .nav-brand {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .nav-link {
-  font-size: 16px;
-  border-bottom: 3px solid rgba(0, 0, 0, 0);
+    font-size: 16px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
 }
 .nav-link:hover {
-  border-bottom: 3px solid var(--pr-color);
+    border-bottom: 3px solid var(--pr-color);
 }
 
 .nav-link.active {
-  font-weight: 700;
-  color: var(--pr-color);
+    font-weight: 700;
+    color: var(--pr-color);
 }
 
 /* Hero section */
 
 #hero {
-  padding-top: 8em;
-  background: linear-gradient(160deg, var(--sc-color), #fff);
-  height: fit-content;
-  width: 100%;
+    padding-top: 8em;
+    background: linear-gradient(160deg, var(--sc-color), #fff);
+    height: fit-content;
+    width: 100%;
 }
 
 .img-hero {
-  width: 40%;
+    width: 40%;
 }
 
 .hero-tagline h1 {
-  font-weight: 700;
-  color: black;
-  font-size: 50px;
-  line-height: auto;
-  letter-spacing: 0%;
-  text-align: left;
+    font-weight: 700;
+    color: black;
+    font-size: 50px;
+    line-height: auto;
+    letter-spacing: 0%;
+    text-align: left;
 }
 .hero-tagline p {
-  color: black;
-  font-size: 16px;
-  margin-bottom: 40px;
-  margin-top: 20px;
-  text-align: left;
-  line-height: 30px;
-  width: 85%;
+    color: black;
+    font-size: 16px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    text-align: left;
+    line-height: 30px;
+    width: 85%;
 }
 .hero-tagline span {
-  color: #b31312;
-  font-weight: 700;
+    color: #b31312;
+    font-weight: 700;
 }
 
 .button-lg-primary {
-  padding: 10px 20px;
-  width: fit-content;
-  background-color: #b31312;
-  /* margin-left: 20vh; */
-  border-radius: 8px;
-  font-weight: 500;
-  color: #fff;
-  border-style: none;
-  text-decoration: none;
-  transition: 0.3s;
+    padding: 10px 20px;
+    width: fit-content;
+    background-color: #b31312;
+    /* margin-left: 20vh; */
+    border-radius: 8px;
+    font-weight: 500;
+    color: #fff;
+    border-style: none;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .button-lg-secondary {
-  padding: 10px 20px;
-  width: fit-content;
-  background-color: var(--pr-light-color);
-  /* margin-left: 20vh; */
-  border-radius: 8px;
-  font-weight: 500;
-  color: white;
-  border-style: none;
-  border: 1px solid white;
-  text-decoration: none;
-  transition: 0.3s;
+    padding: 10px 20px;
+    width: fit-content;
+    background-color: var(--pr-light-color);
+    /* margin-left: 20vh; */
+    border-radius: 8px;
+    font-weight: 500;
+    color: white;
+    border-style: none;
+    border: 1px solid white;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .button-lg-secondary:hover {
-  color: var(--pr-color);
-  background-color: white;
-  transition: 0.5s;
+    color: var(--pr-color);
+    background-color: white;
+    transition: 0.5s;
 }
 
 .button-lg-primary:hover {
-  color: var(--pr-color);
-  background-color: #ffffff;
-  transition: 0.5s;
+    color: var(--pr-color);
+    background-color: #ffffff;
+    transition: 0.5s;
 }
 
 /* Tentang Section */
 #tentang {
-  /* padding: 5em 0; */
-  /* background-color: var(--pr-color); */
-  padding-top: 5em;
+    /* padding: 5em 0; */
+    /* background-color: var(--pr-color); */
+    padding-top: 5em;
 }
 h2 {
-  font-size: 42px;
-  font-weight: 500;
-  color: var(--pr-color);
+    font-size: 42px;
+    font-weight: 500;
+    color: var(--pr-color);
 }
 
 .sub-title {
-  font-size: 18px;
-  color: black;
+    font-size: 18px;
+    color: black;
 }
 
 .card-tentang {
-  width: 100%;
-  height: 313px;
-  border-radius: 5px;
-  border-color: #b31312;
-  padding: 40px;
-  background-color: #ffffff;
-  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 313px;
+    border-radius: 5px;
+    border-color: #b31312;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
 }
 
 .circle-icon {
-  width: 90px;
-  height: 90px;
-  background-color: var(--pr-color);
-  border-radius: 50%;
-  transition: all 0.1s ease-in;
+    width: 90px;
+    height: 90px;
+    background-color: var(--pr-color);
+    border-radius: 50%;
+    transition: all 0.1s ease-in;
 }
 
 .card-tentang h3 {
-  color: #000;
-  font-size: 24px;
-  transition: all 0.2s ease-in;
+    color: #000;
+    font-size: 24px;
+    transition: all 0.2s ease-in;
 }
 .card-tentang p {
-  color: #000;
-  font-size: 14px;
-  transition: all 0.3s ease-in;
+    color: #000;
+    font-size: 14px;
+    transition: all 0.3s ease-in;
 }
 
 /* ketika hovver */
 
 .card-tentang:hover {
-  width: 100%;
-  height: 313px;
-  border-radius: 5px;
-  padding: 40px;
-  background: linear-gradient(160deg, #ff0000, #000000);
-  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 313px;
+    border-radius: 5px;
+    padding: 40px;
+    background: linear-gradient(160deg, #ff0000, #000000);
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
 }
 
 .card-tentang:hover .circle-icon {
-  background-color: #ffffff;
-  transition: all 0.2s ease-in;
+    background-color: #ffffff;
+    transition: all 0.2s ease-in;
 }
 
 .card-tentang:hover h3 {
-  color: #fff;
-  font-size: 24px;
-  transition: all 0.2s ease-in;
+    color: #fff;
+    font-size: 24px;
+    transition: all 0.2s ease-in;
 }
 .card-tentang:hover p {
-  color: #fff;
-  font-size: 14px;
-  transition: all 0.3s ease-in;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease-in;
 }
 
 /* Mengapa Kami */
 #mengapakami {
-  background-color: #b31312;
-  padding: 5em 0;
+    background-color: #b31312;
+    padding: 5em 0;
 }
 #mengapakami h2 {
-  font-size: 38px;
-  font-weight: 500;
-  color: #ffffff;
+    font-size: 38px;
+    font-weight: 500;
+    color: #ffffff;
 }
 .sub-title-mengapa {
-  font-size: 18px;
-  color: var(--fv-color);
-  /* background-color: var(--fv-color); */
+    font-size: 18px;
+    color: var(--fv-color);
+    /* background-color: var(--fv-color); */
 }
 .card-mengapa {
-  width: 100%;
-  height: 313px;
-  padding: 40px;
-  color: #ffffff;
+    width: 100%;
+    height: 313px;
+    padding: 40px;
+    color: #ffffff;
 }
 .card-mengapa h3 {
-  color: var(--fv-color);
+    color: var(--fv-color);
 }
 .material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-  font-size: 70px;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    font-size: 70px;
 }
 .circle-icon-mengapa {
-  width: 120px;
-  height: 120px;
-  background-color: var(--pr-color);
-  border-radius: 50%;
-  transition: all 0.1s ease-in;
-  border: 1px solid white;
-  padding: 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+    width: 120px;
+    height: 120px;
+    background-color: var(--pr-color);
+    border-radius: 50%;
+    transition: all 0.1s ease-in;
+    border: 1px solid white;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 .circle-icon-mengapa:hover {
-  /* scale: 1.1; */
-  transform: scale(1.1);
-  z-index: -1;
+    /* scale: 1.1; */
+    transform: scale(1.1);
+    z-index: -1;
 }
 
 /* Produk Kami */
 #produk {
-  background: whitesmoke;
-  /* height: 180vh; */
-  width: 100%;
-  padding-bottom: 5em;
+    background: whitesmoke;
+    /* height: 180vh; */
+    width: 100%;
+    padding-bottom: 5em;
+}
+#container-card-produk {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 1.5em;
 }
 
 .card-produk {
-  flex: 1 0 200px;
-  text-decoration: none;
+    flex: 1 0 200px;
+    text-decoration: none;
+    cursor: pointer;
 }
 .card-produk img {
-  width: 100%;
-  margin-bottom: 1em;
+    width: 100%;
+    margin-bottom: 1em;
+    border-radius: 1.5em;
+    border-bottom-width: 3px;
+    border-color: rgba(0, 0, 0, 0);
+    border-bottom-style: solid;
 }
 .card-produk h3 {
-  color: black;
-  font-size: medium;
+    color: black;
+    font-size: medium;
 }
+/* .card1:hover div:has(.harga) {
+  transform: translateX(10px);
+  transition: 0.5s;
+} */
+.card-produk:hover img {
+    border-color: var(--pr-light-color);
+    transition: 0.5s;
+}
+
 .produk-list {
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
-  display: block;
-  line-height: 2.5em;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    display: block;
+    line-height: 2.5em;
 }
 
 .produk-list:hover {
-  color: white;
-  background-color: black;
+    color: white;
+    background-color: black;
 }
 
 /* Maps */
 #maps {
-  width: 100%;
-  padding-top: 1em;
-  /* padding: 5em 0; */
+    width: 100%;
+    padding-top: 1em;
+    /* padding: 5em 0; */
 }
 
 #maps a {
-  color: #000;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  text-decoration: none;
-  margin-left: 8 px;
-  /* width: 320px; */
-  display: inline-block;
-  color: #b31312;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    margin-left: 8 px;
+    /* width: 320px; */
+    display: inline-block;
+    color: #b31312;
 }
 
 .card-maps {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 /* Contact */
 #contact {
-  width: 100%;
-  background-color: var(--pr-light-color);
-  color: white;
+    width: 100%;
+    background-color: var(--pr-light-color);
+    color: white;
 
-  /* background-image: url(../assets/img/kontakimage.svg);
+    /* background-image: url(../assets/img/kontakimage.svg);
   background-repeat: no-repeat;
   background-size: cover; */
 }
 
 #contact h2 {
-  font-size: 42px;
-  font-weight: 500;
-  color: white;
+    font-size: 42px;
+    font-weight: 500;
+    color: white;
 }
 
 #contact .container {
-  padding: 5em 0;
+    padding: 5em 0;
 }
 
 .contact-kecil {
-  color: var(--fv-color);
-  font-size: 20px;
+    color: var(--fv-color);
+    font-size: 20px;
 }
 
 .flex-responsif-reverse {
-  display: flex;
-  gap: 3em;
+    display: flex;
+    gap: 3em;
 }
 .flex-responsif-reverse > div {
-  width: 50%;
+    width: 50%;
 }
 
 .flex-responsif-normal {
-  display: flex;
+    display: flex;
 }
 
 .container-gambar-besar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .container-gambar-besar img {
-  height: 100%;
-  max-height: calc(100vh - 100px);
-  width: 100%;
+    height: 100%;
+    max-height: calc(100vh - 100px);
+    width: 100%;
 }
 .container-gambar-besar i {
-  color: white;
+    color: white;
 }
 .hide {
-  display: none;
+    display: none;
 }
 .button-beli {
-  display: block;
-  background-color: #ff0000;
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 5px;
-  width: fit-content;
-  margin-inline: auto;
-  transition: 0.2s;
+    display: block;
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: fit-content;
+    margin-inline: auto;
+    transition: 0.2s;
 }
 .button-beli:hover {
-  background-color: white;
-  color: black;
-  transition: 0.2s;
+    background-color: white;
+    color: black;
+    transition: 0.2s;
 }
 
 footer > .atas > div {
-  width: 100%;
+    width: 100%;
 }
 
 .dropdown-footer {
-  height: 0;
-  overflow-y: hidden;
-  margin-bottom: 1em;
-  transition: 0.3s;
+    height: 0;
+    overflow-y: hidden;
+    margin-bottom: 1em;
+    transition: 0.3s;
 }
 .dropdown-footer a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  line-height: 2.5em;
+    color: white;
+    text-decoration: none;
+    display: block;
+    line-height: 2.5em;
 }
 
 .card-kategori {
-  width: 50%;
-  background-color: var(--card-produk-color);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-  display: flex;
-  height: 250px;
-  justify-content: space-between;
-  padding: 2em;
-  align-items: center;
+    width: 50%;
+    background-color: var(--card-produk-color);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    height: 250px;
+    justify-content: space-between;
+    padding: 2em;
+    align-items: center;
 }
 
 .card-kategori > div {
-  width: 50%;
+    width: 50%;
 }
 
 .card-kategori a {
-  text-decoration: none;
-  color: white;
-  margin-right: 1em;
-  cursor: pointer;
+    text-decoration: none;
+    color: white;
+    margin-right: 1em;
+    cursor: pointer;
 }
 .card-kategori a:hover {
-  text-decoration: none;
-  border-bottom: 2px solid black;
-  color: black;
-  margin-right: 1em;
+    text-decoration: none;
+    border-bottom: 2px solid black;
+    color: black;
+    margin-right: 1em;
 }
 
 .card-kategori img {
-  width: 220px;
-  height: 50%;
-  border-radius: 5px;
-  float: right;
+    width: 220px;
+    height: 50%;
+    border-radius: 5px;
+    float: right;
 }
 
 .card-kategori:hover {
-  background-color: var(--tr-color);
-  transition: 0.3s;
+    background-color: var(--tr-color);
+    transition: 0.3s;
 }
 
 .card-kategori .card-kategori-item {
-  height: 0;
-  overflow-y: hidden;
-  transition: 0.3s;
+    height: 0;
+    overflow-y: hidden;
+    transition: height 0.3s;
 }
 .card-kategori:hover .card-kategori-item {
-  height: 30px;
-  transition: 0.3s;
+    height: fit-content;
+    transition: height 0.3s;
 }
 
 .header-gambar {
-  background-image: url("/assets/img/header-produk.webp");
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--fr-color);
+    background-image: url("/assets/img/header-produk.webp");
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--fr-color);
+}
+.text-header {
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 .kotak-tentang {
-  text-align: center;
-  border: 1px solid var(--pr-color);
-  padding: 2em;
-  /* height: 200px; */
-  aspect-ratio: 1 / 1;
-  width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    text-align: center;
+    border: 1px solid var(--pr-color);
+    padding: 2em;
+    /* height: 200px; */
+    aspect-ratio: 1 / 1;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .garis {
-  display: block;
-  height: 2px;
-  width: 100%;
-  background-color: var(--sc-color);
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--sc-color);
 }
 
 .input-text input {
-  background: none;
-  padding: 0.5em 1em;
-  color: white;
-  border: none;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
+    background: none;
+    padding: 0.5em 1em;
+    color: white;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
 }
 .input-text input:focus {
-  border: none;
-  border: 2px solid white;
-  outline: none;
+    border: none;
+    border: 2px solid white;
+    outline: none;
 }
 .input-text input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 .input-textarea textarea {
-  background: none;
-  padding: 0.5em 1em;
-  color: white;
-  border: none;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
+    background: none;
+    padding: 0.5em 1em;
+    color: white;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
 }
 .input-textarea textarea:focus {
-  border: none;
-  border: 2px solid white;
-  outline: none;
+    border: none;
+    border: 2px solid white;
+    outline: none;
 }
 .input-textarea textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 /* Produk.html */
 
 .kategori-cek {
-  height: 0;
-  overflow-y: hidden;
-  transition: 0.3s;
+    height: 0;
+    overflow-y: hidden;
+    transition: 0.3s;
 }
 
 #kategori:checked ~ .kategori-cek {
-  height: 32.5em;
-  transition: 0.3s;
+    height: 32.5em;
+    transition: 0.3s;
 }
