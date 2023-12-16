@@ -9,12 +9,13 @@ async function getAllBarang() {
   const URLparams = new URLSearchParams(queryString);
   const kategori = URLparams.get("kategori");
   const subkategori = URLparams.get("subkategori");
-  let page = 0;
+  let page = URLparams.get("page");
+  if (!page) page = 1;
   let barangs;
   let barangall;
   if (kategori) {
     const response = await fetch(
-      "http://192.168.1.49:8082/kategori/" + kategori,
+      "http://192.168.1.49:8082/kategori/" + kategori + "/" + page,
       {
         headers: {
           Authorization:
@@ -26,7 +27,7 @@ async function getAllBarang() {
     barangs = await response.json();
   } else if (subkategori) {
     const response = await fetch(
-      "http://192.168.1.49:8082/subkategori/" + subkategori,
+      "http://192.168.1.49:8082/subkategori/" + subkategori + "/" + page,
       {
         headers: {
           Authorization:
@@ -37,8 +38,6 @@ async function getAllBarang() {
     );
     barangs = await response.json();
   } else {
-    page = URLparams.get("page");
-    if (!page) page = 1;
     const response = await fetch(
       "http://192.168.1.49:8082/get20barang/" + page,
       {
