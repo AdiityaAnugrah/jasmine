@@ -275,6 +275,9 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     gap: 1.5em;
 }
+#container-card-produk:not(:has(a:nth-child(4))) {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 200px));
+}
 
 .card-produk {
     flex: 1 0 200px;
