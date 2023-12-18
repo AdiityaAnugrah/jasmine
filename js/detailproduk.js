@@ -37,7 +37,7 @@ async function getGambarBarang() {
   console.log(barang);
 
   Object.values(barang.data[0]).forEach((element, index) => {
-    if (element != id && element != null) {
+    if (element != id && element != null && element.data.length > 0) {
       const blob = new Blob([new Uint8Array(element.data)], {
         type: "image/webp",
       });
