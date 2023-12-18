@@ -25,6 +25,18 @@ async function getAllBarang() {
       }
     );
     barangs = await response.json();
+
+    const response1 = await fetch(
+      "http://192.168.1.49:8082/kategori/" + kategori,
+      {
+        headers: {
+          Authorization:
+            "Bearer {2YkUfjkBhSDocbv4p08ATxo02KI_7Bk2fku2L9VJvqYy1RUZ4}",
+        },
+        method: "GET",
+      }
+    );
+    barangall = await response1.json();
   } else if (subkategori) {
     const response = await fetch(
       "http://192.168.1.49:8082/subkategori/" + subkategori + "/" + page,
@@ -88,14 +100,20 @@ async function getAllBarang() {
 
     const hitungbarang = barangall.data.length;
     const hitungPage = hitungbarang / 20;
-    const pageskrg = Number(URLparams.get("page"));
+    const pageskrg = Number(page);
     if (pageskrg > 1) {
       const liPrev = document.createElement("li");
       liPrev.classList.add("page-item");
       const aPrev = document.createElement("a");
       aPrev.classList.add("page-link");
       aPrev.classList.add("text-dark");
-      aPrev.href = "produk.html?page=" + (Number(pageskrg) - 1);
+      if (kategori) {
+        aPrev.href =
+          "produk.html?kategori=" +
+          kategori +
+          "&page=" +
+          (Number(pageskrg) - 1);
+      } else aPrev.href = "produk.html?page=" + (Number(pageskrg) - 1);
       aPrev.ariaLabel = "Previous";
       const spanPrev = document.createElement("span");
       spanPrev.ariaHidden = "true";
@@ -113,7 +131,9 @@ async function getAllBarang() {
       const aPage = document.createElement("a");
       aPage.classList.add("page-link");
       aPage.classList.add("text-dark");
-      aPage.href = "produk.html?page=" + (i + 1);
+      if (kategori) {
+        aPage.href = "produk.html?kategori=" + kategori + "&page=" + (i + 1);
+      } else aPage.href = "produk.html?page=" + (i + 1);
       aPage.innerHTML = i + 1;
       liPage.appendChild(aPage);
       elmPagination.appendChild(liPage);
@@ -125,7 +145,13 @@ async function getAllBarang() {
       const aNext = document.createElement("a");
       aNext.classList.add("page-link");
       aNext.classList.add("text-dark");
-      aNext.href = "produk.html?page=" + (Number(pageskrg) + 1);
+      if (kategori) {
+        aNext.href =
+          "produk.html?kategori=" +
+          kategori +
+          "&page=" +
+          (Number(pageskrg) + 1);
+      } else aNext.href = "produk.html?page=" + (Number(pageskrg) + 1);
       aNext.ariaLabel = "Next";
       const spanPrev = document.createElement("span");
       spanPrev.ariaHidden = "true";
