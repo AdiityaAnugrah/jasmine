@@ -1,150 +1,147 @@
 /* Responsif untuk layar dengan lebar maksimum 922px */
 @media screen and (max-width: 922px) {
-    /* Tambahkan aturan CSS untuk penyesuaian pada layar dengan lebar maksimum 922px */
+  /* Tambahkan aturan CSS untuk penyesuaian pada layar dengan lebar maksimum 922px */
 }
 
 /* Responsif untuk layar dengan lebar maksimum 576px */
 @media screen and (max-width: 576px) {
-    /* Tambahkan aturan CSS untuk penyesuaian pada layar dengan lebar maksimum 576px */
-    #hero {
-        padding: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    #hero > div {
-        flex: 1;
-        padding: 0 2em;
-    }
-    .hero-tagline h1 {
-        line-height: 42px;
-        font-size: 32px;
-        width: 80%;
-    }
-    .img-hero {
-        display: none;
-    }
-    h2 {
-        font-size: 28px;
-    }
-    .sub-title {
-        font-size: 16px;
-    }
-    .card-tentang {
-        margin: 15px 0;
-    }
-    #search h2 {
-        font-size: 30px;
-        line-height: 28px;
-    }
-    #search p {
-        font-size: 16px;
-        line-height: 18px;
-    }
+  /* Tambahkan aturan CSS untuk penyesuaian pada layar dengan lebar maksimum 576px */
+  #hero {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #hero > div {
+    flex: 1;
+    padding: 0 2em;
+  }
+  .hero-tagline h1 {
+    line-height: 42px;
+    font-size: 32px;
+    width: 80%;
+  }
+  .img-hero {
+    display: none;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .sub-title {
+    font-size: 16px;
+  }
+  .card-tentang {
+    margin: 15px 0;
+  }
+  #search h2 {
+    font-size: 30px;
+    line-height: 28px;
+  }
+  #search p {
+    font-size: 16px;
+    line-height: 18px;
+  }
 
-    .input-cari .button-secondary {
-        width: 30%;
-        height: 60px;
-    }
-    .input-cari .material-icons {
-        font-size: 20px;
-        /* height: 60px; */
-    }
-    .input-cari .button-primary {
-        height: 60px;
-        width: 25%;
-        font-size: 18px;
-    }
-    .input-cari .from-control {
-        height: 40px !important;
-        width: 30%;
-    }
-    /* #produk img {
+  .input-cari .button-secondary {
+    width: 30%;
+    height: 60px;
+  }
+  .input-cari .material-icons {
+    font-size: 20px;
+    /* height: 60px; */
+  }
+  .input-cari .button-primary {
+    height: 60px;
+    width: 25%;
+    font-size: 18px;
+  }
+  .input-cari .from-control {
+    height: 40px !important;
+    width: 30%;
+  }
+  /* #produk img {
     width: 50vw;
   } */
-    /* resopnsif utk main office dan sosmed */
-    .flex-responsif {
-        display: flex;
-        justify-content: center;
-    }
+  /* resopnsif utk main office dan sosmed */
+  .flex-responsif {
+    display: flex;
+    justify-content: center;
+  }
 
-    .flex-responsif > div {
-        width: 50%;
-    }
+  .flex-responsif > div {
+    width: 50%;
+  }
 
-    .flex-responsif-normal {
-        flex-direction: column-reverse;
-        gap: 2em;
-    }
-    .flex-responsif-normal > div {
-        width: 100%;
-    }
+  .flex-responsif-normal {
+    flex-direction: column-reverse;
+    gap: 2em;
+  }
+  .flex-responsif-normal > div {
+    width: 100%;
+  }
 
-    /* resopnsif reverse utk main office-sosmed dan map*/
-    .flex-responsif-reverse {
-        flex-direction: column;
-        gap: 2em;
-    }
-    .flex-responsif-reverse > div {
-        width: 100%;
-    }
-    .show-to-hide {
-        display: none;
-    }
-    .text-left-to-center {
-        text-align: center;
-    }
+  /* resopnsif reverse utk main office-sosmed dan map*/
+  .flex-responsif-reverse {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .flex-responsif-reverse > div {
+    width: 100%;
+  }
+  .show-to-hide {
+    display: none;
+  }
+  .text-left-to-center {
+    text-align: center;
+  }
 
-    .card-kategori .card-kategori-item {
-        height: fit-content;
-    }
-    .card-kategori:hover .card-kategori-item {
-        height: fit-content;
-    }
-    .card-kategori-item a {
-        color: black;
-        display: block;
-        width: fit-content;
-    }
-    .card-kategori img {
-        width: 100%;
-        aspect-ratio: 1 /1;
-    }
+  .card-kategori .card-kategori-item {
+    height: fit-content;
+  }
+  .card-kategori:hover .card-kategori-item {
+    height: fit-content;
+  }
+  .card-kategori-item a {
+    color: black;
+    display: block;
+    width: fit-content;
+  }
+  .card-kategori img {
+    width: 100%;
+    aspect-ratio: 1 /1;
+  }
 
-    .hide-to-show-block {
-        display: block;
-    }
+  .hide-to-show-block {
+    display: block;
+  }
 
-    /* produk */
-    #container-card-produk {
-        grid-template-columns: repeat(
-            auto-fit,
-            minmax(min(100%, 100px), 0.5fr)
-        );
-    }
-    .button-lg-primary:hover {
-        color: white;
-        background-color: #b31312;
-        transition: 0.5s;
-    }
-    .w-50-to-100 {
-        width: 100%;
-    }
+  /* produk */
+  #container-card-produk {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 0.5fr));
+  }
+  .button-lg-primary:hover {
+    color: white;
+    background-color: #b31312;
+    transition: 0.5s;
+  }
+  .w-50-to-100 {
+    width: 100%;
+  }
 }
 
 /* Responsif untuk layar dengan lebar maksimum 350px */
 @media screen and (max-width: 350px) {
-    /* Tambahkan aturan CSS untuk penyesuaian pada layar dengan lebar maksimum 350px */
-    .hero-tagline h1 {
-        line-height: 32px;
-    }
-    .img-hero {
-        width: 30%;
-    }
-    .kotak-tentang {
-        width: 40%;
-        aspect-ratio: 1/1;
-    }
+  /* Tambahkan aturan CSS untuk penyesuaian pada layar dengan lebar maksimum 350px */
+  .hero-tagline h1 {
+    line-height: 32px;
+  }
+  .img-hero {
+    width: 30%;
+  }
+  .kotak-tentang {
+    width: 40%;
+    aspect-ratio: 1/1;
+  }
 }

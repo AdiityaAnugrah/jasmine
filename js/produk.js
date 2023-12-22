@@ -15,7 +15,7 @@ async function getAllBarang() {
   let barangall;
   if (kategori) {
     const response = await fetch(
-      "http://192.168.1.49:8082/kategori/" + kategori + "/" + page,
+      "http://192.168.1.36:8082/kategori/" + kategori + "/" + page,
       {
         headers: {
           Authorization:
@@ -27,7 +27,7 @@ async function getAllBarang() {
     barangs = await response.json();
 
     const response1 = await fetch(
-      "http://192.168.1.49:8082/kategori/" + kategori,
+      "http://192.168.1.36:8082/kategori/" + kategori,
       {
         headers: {
           Authorization:
@@ -39,7 +39,7 @@ async function getAllBarang() {
     barangall = await response1.json();
   } else if (subkategori) {
     const response = await fetch(
-      "http://192.168.1.49:8082/subkategori/" + subkategori + "/" + page,
+      "http://192.168.1.36:8082/subkategori/" + subkategori + "/" + page,
       {
         headers: {
           Authorization:
@@ -51,7 +51,7 @@ async function getAllBarang() {
     barangs = await response.json();
   } else {
     const response = await fetch(
-      "http://192.168.1.49:8082/get20barang/" + page,
+      "http://192.168.1.36:8082/get20barang/" + page,
       {
         headers: {
           Authorization:
@@ -62,7 +62,7 @@ async function getAllBarang() {
     );
     barangs = await response.json();
 
-    const response1 = await fetch("http://192.168.1.49:8082/getallbarang/", {
+    const response1 = await fetch("http://192.168.1.36:8082/getallbarang/", {
       headers: {
         Authorization:
           "Bearer {2YkUfjkBhSDocbv4p08ATxo02KI_7Bk2fku2L9VJvqYy1RUZ4}",
@@ -187,7 +187,7 @@ elmformsearch.addEventListener("submit", (e) => {
     }
     formBody = formBody.join("&");
 
-    const response = await fetch("http://192.168.1.49:8082/cari", {
+    const response = await fetch("http://192.168.1.36:8082/cari", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
