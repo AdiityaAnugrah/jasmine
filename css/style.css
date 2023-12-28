@@ -361,7 +361,7 @@ h2 {
 }
 
 #contact .container {
-  padding: 5em 0;
+  padding-top: 5em 0;
 }
 
 .contact-kecil {
@@ -602,4 +602,75 @@ footer > .atas > div {
 }
 .img-produk .img-produk-select.selected {
   border: 1px solid var(--pr-light-color);
+}
+
+/* Coba Untuk footer baru */
+
+.footer__left-menu {
+  margin: 0;
+  list-style: none;
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+.footer__left-menu li {
+  line-height: 1.7rem;
+}
+.footer__left-menu a {
+  color: #555;
+  text-decoration: none;
+}
+
+.footer__partner__payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.footer__partner__payment .footer__partner__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 55px;
+  height: 35px;
+  border: 1px solid #ddd;
+  /* background-color: #ddd; */
+  margin: 0 10px 10px 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.footer__partner__payment .footer__partner__img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.footer__service-customer .title {
+  font-size: 1.2rem;
+}
+.footer__service-customer .fs-5 {
+  font-size: 0.9rem;
+}
+
+.footer__service-customer .wa-click {
+  width: 50%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+@media (max-width: 767.98px) {
+  .footer__service-customer .wa-click {
+    width: 40%;
+  }
 }
