@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 :root {
-  --pr-color: #b31312;
+  --bg-color: #ddf7e3;
+  --pr-color: #df2e38;
   --sc-color: #848484;
-  --tr-color: #ea906c;
+  --tr-color: #1db954;
   --fr-color: #141e46;
-  --fv-color: #fff5e0;
-  --pr-light-color: #b31312;
+  --fv-color: #ffffff;
+  --pr-light-color: #c7e8ca;
   --card-produk-color: rgb(239, 239, 239);
 }
 
@@ -14,8 +15,8 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-color: #929292;
-  background: #a8a6a6;
+  background-color: var(--bg-color);
+  /* background: var(--bg-color); */
 }
 
 .toast {
@@ -48,7 +49,7 @@ body {
 
 /* navbar color */
 .nav-color {
-  background-color: whitesmoke;
+  background-color: var(--fv-color);
   transition: all-ease-in-out 0.5s;
 }
 /* navbar */
@@ -61,19 +62,20 @@ body {
   border-bottom: 3px solid rgba(0, 0, 0, 0);
 }
 .nav-link:hover {
-  border-bottom: 3px solid var(--pr-color);
+  border-bottom: 3px solid var(--tr-color);
 }
 
 .nav-link.active {
   font-weight: 700;
-  color: var(--pr-color);
+  color: var(--tr-color);
 }
 
 /* Hero section */
 
 #hero {
   padding-top: 8em;
-  background: linear-gradient(160deg, #c1c1c1, #fff);
+  background: white;
+  /* background: linear-gradient(160deg, #c1c1c1, #fff); */
   height: fit-content;
   width: 100%;
 }
@@ -100,14 +102,14 @@ body {
   width: 85%;
 }
 .hero-tagline span {
-  color: #b31312;
+  color: var(--tr-color);
   font-weight: 700;
 }
 
 .button-lg-primary {
   padding: 10px 20px;
   width: fit-content;
-  background-color: #b31312;
+  background-color: var(--tr-color);
   /* margin-left: 20vh; */
   border-radius: 8px;
   font-weight: 500;
@@ -120,7 +122,7 @@ body {
 .button-lg-secondary {
   padding: 10px 20px;
   width: fit-content;
-  background-color: var(--pr-light-color);
+  background-color: var(--tr-color);
   /* margin-left: 20vh; */
   border-radius: 8px;
   font-weight: 500;
@@ -132,13 +134,13 @@ body {
 }
 
 .button-lg-secondary:hover {
-  color: var(--pr-color);
+  color: var(--tr-color);
   background-color: white;
   transition: 0.5s;
 }
 
 .button-lg-primary:hover {
-  color: var(--pr-color);
+  color: var(--tr-color);
   background-color: #ffffff;
   transition: 0.5s;
 }
@@ -152,7 +154,7 @@ body {
 h2 {
   font-size: 42px;
   font-weight: 500;
-  color: var(--pr-color);
+  color: var(--tr-color);
 }
 
 .sub-title {
@@ -164,7 +166,7 @@ h2 {
   width: 100%;
   height: 313px;
   border-radius: 5px;
-  border-color: #b31312;
+  border-color: var(--tr-color);
   padding: 40px;
   background-color: #ffffff;
   box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
@@ -173,7 +175,7 @@ h2 {
 .circle-icon {
   width: 90px;
   height: 90px;
-  background-color: var(--pr-color);
+  background-color: var(--tr-color);
   border-radius: 50%;
   transition: all 0.1s ease-in;
 }
@@ -196,7 +198,7 @@ h2 {
   height: 313px;
   border-radius: 5px;
   padding: 40px;
-  background: linear-gradient(160deg, #ff0000, #000000);
+  background: linear-gradient(160deg, var(--tr-color), #000000);
   box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
 }
 
@@ -218,7 +220,7 @@ h2 {
 
 /* Mengapa Kami */
 #mengapakami {
-  background-color: #b31312;
+  background-color: var(--tr-color);
   padding: 5em 0;
 }
 #mengapakami h2 {
@@ -247,7 +249,7 @@ h2 {
 .circle-icon-mengapa {
   width: 120px;
   height: 120px;
-  background-color: var(--pr-color);
+  background-color: var(--tr-color);
   border-radius: 50%;
   transition: all 0.1s ease-in;
   border: 1px solid white;
@@ -301,7 +303,7 @@ h2 {
   transition: 0.5s;
 } */
 .card-produk:hover img {
-  border-color: var(--pr-light-color);
+  border-color: var(--tr-color);
   transition: 0.5s;
 }
 
@@ -335,7 +337,7 @@ h2 {
   margin-left: 8 px;
   /* width: 320px; */
   display: inline-block;
-  color: #b31312;
+  color: var(--tr-color);
 }
 
 .card-maps {
@@ -346,7 +348,7 @@ h2 {
 /* Contact */
 #contact {
   width: 100%;
-  background-color: var(--pr-light-color);
+  background-color: var(--tr-color);
   color: white;
 
   /* background-image: url(../assets/img/kontakimage.svg);
@@ -406,7 +408,7 @@ h2 {
 }
 .button-beli {
   display: block;
-  background-color: #ff0000;
+  background-color: var(--tr-color);
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -503,7 +505,7 @@ footer > .atas > div {
 }
 .kotak-tentang {
   text-align: center;
-  border: 1px solid var(--pr-color);
+  border: 1px solid var(--tr-color);
   padding: 2em;
   /* height: 200px; */
   aspect-ratio: 1 / 1;
@@ -601,7 +603,7 @@ footer > .atas > div {
   transition: 0.2s;
 }
 .img-produk .img-produk-select.selected {
-  border: 1px solid var(--pr-light-color);
+  border: 1px solid var(--tr-color);
 }
 
 /* Coba Untuk footer baru */
