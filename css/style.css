@@ -622,6 +622,9 @@ footer > .atas > div {
   color: #555;
   text-decoration: none;
 }
+.footer__left-menu a:hover {
+  color: var(--tr-color);
+}
 
 .footer__partner__payment {
   display: -webkit-box;

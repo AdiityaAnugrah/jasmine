@@ -118,6 +118,7 @@
 
     <nav
       class="navbar navbar-expand-lg bg-body-tertiary navbar-light nav-color position-fixed w-100"
+      style="z-index: 9"
     >
       <div class="container">
         <a class="navbar-brand" href="/">
@@ -424,8 +425,20 @@
     <!-- Contact -->
     <section id="contact">
       <div class="container flex-responsif-reverse">
-        <div class="show-to-hide">
-          <img src="/assets/img/tntng.svg" style="width: 100%" />
+        <div class="show-to-hide d-flex justify-content-center">
+          <script
+            src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+            type="module"
+          ></script>
+          <dotlottie-player
+            src="https://lottie.host/b530e7bb-cbaf-4d16-b9de-e8ab63e1d029/WzVvXLOMIj.json"
+            background="transparent"
+            speed="1"
+            style="width: 400px; height: 400px; z-index: 0"
+            loop
+            autoplay
+          ></dotlottie-player>
+          <!-- <img src="/assets/img/tntng.svg" style="width: 100%" /> -->
         </div>
         <div style="padding-inline: 1em">
           <div>
