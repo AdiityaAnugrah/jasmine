@@ -122,8 +122,9 @@
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 0.5fr));
   }
   .button-lg-primary:hover {
-    color: white;
-    background-color: #b31312;
+    color: var(--tr-color);
+    background-color: var(--bg-color);
+    /* border: 1px solid black; */
     transition: 0.5s;
   }
   .w-50-to-100 {

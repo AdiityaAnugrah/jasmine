@@ -679,3 +679,9 @@ footer > .atas > div {
     width: 40%;
   }
 }
+.marketplace {
+  border: 1px solid #ddd;
+  padding: 0.6rem;
+  height: 45px;
+  border-radius: 5px;
+}

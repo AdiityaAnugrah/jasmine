@@ -14,7 +14,7 @@ async function getBarang() {
   const queryString = window.location.search;
   const URLparams = new URLSearchParams(queryString);
   const id = URLparams.get("id");
-  const response = await fetch("http://192.168.1.36:8082/barang/" + id);
+  const response = await fetch("http://192.168.1.39:8082/barang/" + id);
   const barang = await response.json();
   console.log(barang);
   jmlVarian = barang.data[0].jml_varian;
@@ -25,7 +25,7 @@ async function getBarang() {
   const blobUrl = URL.createObjectURL(blob);
   elmGambar.src = blobUrl;
   elmNama.innerText = barang.data[0].nama;
-  elmBeli.href = "http://192.168.1.36:8082/product/" + barang.data[0].id;
+  elmBeli.href = "http://192.168.1.39:8082/product/" + barang.data[0].id;
   elmDeskrip.innerText = barang.data[0].deskripsi;
   elmKategori.innerText =
     "Kategori : " +
@@ -47,7 +47,7 @@ async function getBarang() {
     elmInput.setAttribute("autocomplete", "off");
     const elmLabel = document.createElement("label");
     elmLabel.classList.add("btn");
-    elmLabel.classList.add("btn-outline-danger");
+    elmLabel.classList.add("btn-outline-dark");
     elmLabel.setAttribute("for", "btnradio" + i);
     elmLabel.innerHTML = varian[i - 1];
     console.log(elmInput, elmLabel);
@@ -65,7 +65,7 @@ async function getGambarBarang() {
   const queryString = window.location.search;
   const URLparams = new URLSearchParams(queryString);
   const id = URLparams.get("id");
-  const response = await fetch("http://192.168.1.36:8082/gambar/" + id);
+  const response = await fetch("http://192.168.1.39:8082/gambar/" + id);
   const barang = await response.json();
   console.log(barang);
 
