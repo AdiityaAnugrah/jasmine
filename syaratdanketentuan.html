@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tag yang Diperlukan -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font dari Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <!-- material Icon -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- icon google -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/917733e7d4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
+    <!-- Stylesheet Eksternal -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Css Responsive -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Logo -->
+    <link rel="icon" href="assets/img/Logo.png" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Jasmine Furniture</title>
+    <!-- <link rel="canonical" href="#">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "CompanyProfile",
+        "headline": "Jasmine Furniture",
+        "datePublished": "2023-10-11T12:02:41Z",
+        "image": [
+          "Logo.png"
+        ]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript> -->
+  </head>
+  <body>
+    <div class="toast z-3 start-50 translate-middle">
+      <div class="toast-body">
+        <p>Hello, world! This is a toast message.</p>
+        <div class="mt-2 pt-2 border-top">
+          <a type="button" class="btn btn-danger btn-sm" hidden>Ok</a>
+          <button
+            type="button"
+            class="btn btn-secondary btn-sm"
+            onclick="hapusToast()"
+          >
+            Ok
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- nampilin gambar -->
+    <div id="show-gambar" class="container-gambar-besar hide">
+      <div
+        style="
+          width: 100%;
+          padding: 10px 20px;
+          display: flex;
+          justify-content: end;
+          height: 30px;
+        "
+      >
+        <i
+          class="material-icons"
+          onclick="handleClose()"
+          style="cursor: pointer"
+          >close</i
+        >
+      </div>
+      <div
+        style="
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <img src="/assets/img/produk/lemari1.svg" alt="" />
+      </div>
+      <div class="pb-3">
+        <a class="button-beli" id="btn-store">Go to store</a>
+      </div>
+    </div>
+
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary navbar-light nav-color position-fixed w-100"
+      style="z-index: 9"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/img/Logo.png" alt="Jasmine" width="100" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- <form class="d-flex mx-auto" role="search" id="search-box">
+            <input
+              id="search-input"
+              class="form-control me-2"
+              type="search"
+              placeholder="cari produk"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-dark" type="submit">Cari</button>
+          </form> -->
+
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-2">
+              <a class="nav-link active fw-bold" aria-current="page" href="/"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-bold" href="/produk.html">Produk</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="/tentang.html" class="nav-link fw-bold">Tentang</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="/kontakkami.html" class="nav-link fw-bold">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="margin-navbar bg-body"></section>
+
+    <section>
+      <div class="konten">
+        <div class="container">
+          <h4>Syarat Dan Ketentuan</h4>
+          <p>
+            <span>Selamat datang di </span
+            ><a
+              style="color: var(--hijau)"
+              class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              href="http://www.jasminefurniture.co.id"
+              ><span>jasminefurniture.co.id</span></a
+            ><span>
+              . Harap membaca syarat dan ketentuan dengan saksama. Dengan
+              menggunakan website ini, Anda dianggap telah menyetujui dan
+              menerima syarat dan ketentuan yang tertera.&nbsp;</span
+            >
+          </p>
+          <p>
+            Bila memiliki pertanyaan mengenai Syarat dan Ketentuan yang berlaku,
+            silakan menghubungi kami di 08xxxxxx.
+          </p>
+          <h4>Perubahan</h4>
+          <p>
+            Jasmine Furniture berhak sewaktu-waktu mengubah atau memperbaharui
+            Syarat dan Ketentuan di website
+            <a
+              style="color: var(--hijau)"
+              class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              href="http://www.jasminefurniture.co.id"
+              ><span>jasminefurniture.co.id</span></a
+            ><span>
+              tanpa pemberitahuan sebelumnya (prior notice). Syarat dan
+              Ketentuan yang telah diperbaharui akan berlaku untuk semua
+              pemesanan baru setelah perubahan dipublikasikan. Anda disarankan
+              untuk membaca Syarat dan Ketentuan sebelum melakukan pesanan </span
+            ><span>—</span><span> yang mungkin berubah sewaktu-waktu.</span>
+          </p>
+          <h4>Informasi Tentang Belanja Online</h4>
+          <ul>
+            <li>
+              <p>
+                <span
+                  >Ketentuan Penggunaan berlaku ketika anda mengakses website
+                  jasminefurniture.co.id , baik saat Anda membeli produk, maupun
+                  tidak.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture berusaha memberikan semua informasi
+                  tercantum dengan benar. Namun, terkadang terjadi kesalahan
+                  atau membutuhkan pembaharuan. Maka dari itu, Jasmine Furniture
+                  akan berusaha memperbaharui informasi di website
+                  jasminefurniture.co.id sesegera mungkin, dan jika kami merasa
+                  bahwa kesalahan tersebut mempengaruhi pemesanan Anda, maka
+                  kami akan menginformasikannya kepada Anda.&nbsp;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture berusaha menampilkan warna pada produk
+                  seakurat mungkin pada website. Namun, karena warna yang
+                  tertampil di layar Anda juga bergantung pada layar Anda, kami
+                  tidak dapat menjamin akurasi warna yang tertampil di layar
+                  anda.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Ukuran serta bentuk produk dapat terlihat berbeda dengan
+                  produk aslinya, tergantung dengan tampilan produk pada layar
+                  Anda. Jasmine Furniture menyediakan ukuran dan pengukuran
+                  dalam setiap dekripsi produk, sehingga Anda bertanggung jawab
+                  memeriksa ukuran produk yang Anda inginkan.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Gambar yang tertera pada website jasminefurniture.co.id hanya
+                  ditujukan sebagai ilustrasi saja. Jasmine Furniture
+                  menyediakan deskripsi produk yang lebih akurat dan rincian
+                  yang disertakan bersama produk. Anda disarankan untuk membaca
+                  deskripsi tersebut dengan saksama.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture berusaha menampilkan harga, dimensi, serta
+                  ketersediaan produk jasminefurniture.co.id . Namun, bila
+                  terdapat kesalahan, Jasmine Furniture dapat sewaktu-waktu
+                  mengubah dan membenarkan kesalahan, ketidaktelitian dan
+                  kelalaian, `</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Semua produk tergantung pada ketersediaan produk. Jasmine
+                  Furniture berhak untuk membatasi kuantitas pembelian,
+                  membatalkan semua atau sebagian pembelian, dan melakukan
+                  penghentian (</span
+                ><span>discontinue</span
+                ><span
+                  >) produk tanpa pemberitahuan sebelumnya. Jasmine Furniture
+                  juga dapat merubah harga tanpa pemberitahuan
+                  sebelumnya.&nbsp;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture berhak untuk menarik produk cacat produksi
+                  sewaktu-waktu, dan akan melakukan pengembalian biaya yang
+                  telah Anda bayarkan sehubungan dengan ketidaktersediaan
+                  produk.&nbsp;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture berusaha mengantarkan produk pesanan Anda
+                  sesuai dengan perkiraan pengantaran, namun perkiraan dan
+                  tanggal pengantaran dapat bervariasi.&nbsp;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Tidak semua produk dan promosi yang ditawarkan Jasmine
+                  Furniture tersedia di jasminefurniture.co.id . Anda dapat
+                  menemukan perbedaan harga antara penjualan online dan offline.
+                  Hal ini terjadi terkait promosi di toko dan promosi
+                  online.&nbsp;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture memeriksa virus yang mungkin ada dalam
+                  website jasminefurniture.co.id , namun Jasmine Furniture tidak
+                  dapat menjamin kebebasan website dari virus atau konten
+                  berbahaya lainnya. Demi keamanan Anda, Anda diharapkan untuk
+                  memiliki perangkat lunak yang tepat dan sistem untuk memeriksa
+                  virus dan konten berbahaya lainnya di internet.</span
+                >
+              </p>
+            </li>
+          </ul>
+          <p>
+            <b><br /></b>
+          </p>
+          <h4>Ketersediaan Produk</h4>
+          <p>
+            Jasmine Furniture berhak untuk mengubah dan melakukan penghentian
+            (discontinue) produk baik secara temporer maupun permanen tanpa
+            pemberitahuan sebelumnya.&nbsp;
+          </p>
+          <p>
+            <b><br /></b>
+          </p>
+          <h4>Keamanan</h4>
+          <p>
+            Untuk mengakses fitur-fitur dalam website jasminefurniture.co.id ,
+            anda membutuhkan sebuah akun pengguna. Anda bertanggung jawab untuk
+            memastikan bahwa detail login, kode sandi dan semua detail lainnya
+            yang berkaitan dengan akun Anda tetap selalu rahasia.&nbsp; Dengan
+            begitu, setuju bahwa Jasmine Furniture tidak bertanggung jawab untuk
+            penggunaan tidak sah detail-detail serta kata sandi tersebut. Untuk
+            membuat akun, Anda mencapai umur 18 tahun atau lebih, atau dibawah
+            18 tahun dengan persetujuan dari orang tua atau wali.
+          </p>
+          <p>
+            Jika anda melanggar syarat penggunaan dan melakukan penipuan atau
+            pemalsuan informasi menggunakan akun Anda, Jasmine Furniture dapat
+            mengakhiri akun Anda dan berhak untuk membebankan sebagian atau
+            seluruh kerugian pada Anda, membawa tindakan hukum melalui penegakan
+            hukum lokal, nasional dan internasional, serta melaporkan penyedia
+            layanan internet (internet service provider) anda atas tindakan
+            penipuan yang telah anda lakukan dengan website
+            jasminefurniture.co.id .
+          </p>
+          <p>
+            <b><br /></b>
+          </p>
+          <h4>Persyaratan Pemesanan Produk</h4>
+          <p>
+            Pembayaran atas pembelian produk pada website jasminefurniture.co.id
+            hanya dapat dilakukan oleh pengguna yang sudah memiliki akun.
+            Pengguna akun diharuskan berusia 18 tahun atau lebih, atau dibawah
+            18 tahun dengan pengawasan orang tua atau wali.
+          </p>
+          <h4>Pembelian Produk</h4>
+          <h2>Pemesanan</h2>
+          <ul>
+            <li>
+              <p>
+                <span
+                  >Silakan lihat bagian Cara Belanja untuk informasi mengenai
+                  langkah-langkah membuat pesanan. Pemesanan produk menunjukkan
+                  bahwa Anda berminat untuk membeli produk Jasmine Furniture,
+                  dimana jika Anda memesan lebih dari satu produk, maka
+                  pemesanan Anda akan terdiri dari serangkaian produk yang Anda
+                  minati untuk dibeli.&nbsp;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Halaman Konfirmasi Pesanan menetapkan rincian akhir pesanan
+                  Anda di Belanja Online.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Halaman Konfirmasi Pesanan terdiri dari detail produk yang
+                  telah Anda pesan dan harga keseluruhan pemesanan
+                  produk.&nbsp;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Konfirmasi Pesanan hanyalah sebuah pengakuan bahwa pesanan
+                  Anda telah diterima oleh Belanja Online. Hal ini tidak
+                  menunjukkan bahwa kami telah menerima pesanan Anda tidak
+                  terkait dengan kontrak.&nbsp;</span
+                >
+              </p>
+            </li>
+          </ul>
+          <h2>Penerimaan Pemesanan</h2>
+          <ul>
+            <li>
+              <p>
+                <span
+                  >Pesanan Anda akan diterima hanya saat kami mengirimkan produk
+                  kepada Anda. Tidak terdapat kontrak yang mengikat sebelum kami
+                  mengirimkan produk kepada Anda.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Meskipun Jasmine Furniture berharap dapat mengirimkan semua
+                  produk pesanan Anda, Jasmine Furniture berhak untuk tidak
+                  menerima pemesanan apapun sebelum pesanan diterima tanpa
+                  memberikan alasan. Jika kami menolak pemesanan Anda, kami akan
+                  menginformasikan Anda sesegera mungkin.</span
+                >
+              </p>
+            </li>
+          </ul>
+          <h2>Pembayaran</h2>
+          <ul>
+            <li>
+              <p>
+                <span
+                  >Pembayaran pesanan produk dapat anda lakukan dengan mengikuti
+                  petunjuk pembayaran sesuai dengan metode pembayaran yang Anda
+                  pilih pada laman Pembayaran.&nbsp;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Penerimaan biaya pembayaran bukan berarti kami telah menerima
+                  pesanan Anda, sehingga disarankan agar Anda melakukan
+                  pembayaran setelah Anda menerima email konfirmasi pemesanan
+                  dari Jasmine Furniture dan jika kami memutuskan untuk tidak
+                  menerima pemesanan Anda, maka biaya pembayaran akan kami
+                  kembalikan sesegera mungkin (dalam tempo 30 hari kalender Anda
+                  akan menerima pemberitahuan dari Melody Furniture bahwa
+                  pesanan Anda belum dapat diterima). Sehubungan dengan pasal
+                  ini, Anda setuju bahwa Jasmine Furniture memiliki hak untuk
+                  tidak menerima dan membatalkan pesanan Anda dalam hal
+                  terdapat, namun tidak terbatas pada, indikasi penyalahgunaan
+                  alat pembayaran yang digunakan oleh Anda atau indikasi
+                  tindakan lain yang Anda lakukan yang menurut hukum Negara
+                  Republik Indonesia dinyatakan sebagai pelanggaran. Setiap
+                  pembatalan dikarenakan alasan sebagaimana dimaksud dalam Pasal
+                  ini. Maka kami akan mengembalikan biaya pembayaran secara
+                  penuh setelah pembatalan dilakukan (dalam tempo 30 hari
+                  kalender Anda akan menerima pemberitahuan dari Jasmine
+                  Furniture bahwa pesanan Anda belum dapat diterima). Anda
+                  setuju untuk menerima pembatalan tersebut dan membebaskan
+                  Jasmine Furniture dari segala tuntutan atau ganti rugi dalam
+                  bentuk apapun sebagai akibat dari pembatalan.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Kecuali dinyatakan sebaliknya, semua harga yang ditampilkan
+                  sudah termasuk PPN.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Harga yang harus dibayarkan untuk produk pesanan Anda adalah
+                  harga yang ditetapkan oleh Belanja Online pada saat Anda
+                  memesan.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture menggunakan sistem pembayaran pihak ketiga
+                  (pihak yang menyimpan data Anda saat proses pembayaran) yang
+                  terpercaya untuk memastikan bahwa pembayaran Anda aman dan
+                  bahwa rincian informasi pribadi serta keuangan Anda tidak
+                  sedang digunakan untuk kecurangan.</span
+                >
+              </p>
+            </li>
+          </ul>
+          <h4>Kesalahan Harga</h4>
+          <p>
+            Jasmine Furniture selalu berusaha untuk memberikan dan memastikan
+            harga yang tertera pada website jasminefurniture.co.id sudah benar,
+            namun kesalahan mungkin dapat terjadi.&nbsp;
+          </p>
+          <ul>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture berhak mengganti dan membenarkan kesalahan
+                  harga, termasuk ketika pembelian telah diajukan dan pembayaran
+                  telah dilakukan.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jika Jasmine Furniture menemukan kesalahan pada harga produk
+                  yang Anda pesan, Jasmine Furniture akan memberitahu Anda dan
+                  memberi Anda pilihan untuk mengkonfirmasi kembali pesanan Anda
+                  atau membatalkannya.&nbsp;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jika Jasmine Furniture tidak dapat menghubungi Anda
+                  menggunakan detail kontak yang telah Anda berikan ketika
+                  proses pemesanan, Jasmine Furniture akan membatalkan pesanan
+                  anda dan memberitahu Anda melalui email.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jika Anda memilih untuk membatalkan pesanan yang telah Anda
+                  bayar setelah mendapatkan pemberitahuan mengenai kesalahan
+                  harga, Jasmine Furniture akan melakukan pengembalian biaya
+                  sepenuhnya sesegera mungkin dalam tempo tiga puluh (30) hari
+                  sejak tanggal pembatalan.&nbsp;</span
+                >
+              </p>
+            </li>
+          </ul>
+          <p>
+            <b><br /></b>
+          </p>
+          <h4>Pengiriman</h4>
+          <ul>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture akan mengirimkan produk sesuai dalam
+                  halaman Konfirmasi Pesanan dan Konfirmasi Email.&nbsp;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture memberikan fasilitas gratis biaya
+                  pengiriman bagi tujuan pesanan di Pulau Jawa dan Pulau Bali
+                  (Denpasar dan sekitarnya). Bila tujuan pengiriman pembelian
+                  Anda berada di luar Pulau Jawa dan Pulau Bali, harap
+                  menghubungi kami di 08XXXX.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Dengan melakukan pemesanan, Anda setuju bahwa produk akan
+                  Anda terima pada saat tanggal kedatangan produk pesanan Anda.
+                  Jika Anda tidak berada di tempat pengiriman saat produk akan
+                  dikirimkan, harap menghubungi 08XXX tidak lebih dari 48 jam
+                  sebelum tanggal pengiriman produk.&nbsp;</span
+                >
+              </p>
+            </li>
+            <ul>
+              <li>
+                <p>
+                  <span
+                    >Anda wajib untuk memeriksa kembali dimensi produk dan
+                    dimensi kotak pengiriman produk untuk memastikan bahwa
+                    terdapat cukup ruang sesuai ukuran produk pada alamat
+                    pengiriman yang Anda berikan.</span
+                  >
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span
+                    >Meskipun Jasmine Furniture berusaha agar pesanan Anda
+                    sampai di tempat pengiriman sesuai dengan tanggal perkiraan,
+                    keadaan di luar kontrol Jasmine Furniture dapat menyebabkan
+                    perubahan tanggal.&nbsp;</span
+                  >
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span
+                    >Jika pengiriman pesanan tidak dapat dilakukan karena
+                    keadaan lokasi, akses kurang memadai atau alasan apapun di
+                    luar kendali Jasmine Furniture, Anda setuju untuk membayar
+                    biaya tambahan untuk penyimpanan dan pengantaran ulang,
+                    serta biaya administrasi untuk mengatur ulang pengantaran
+                    produk. Tambahan biaya tersebut akan dikonfirmasikan kembali
+                    kepada Anda, dimana Anda dapat memilih untuk melakukan
+                    penambahan biaya atau membatalkan pesanan. Jika Anda memilih
+                    untuk membatalkan pesanan, Jasmine Furniture akan melakukan
+                    pengembalian biaya, dikurangi dengan biaya pengiriman yang
+                    tidak berhasil.</span
+                  >
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span
+                    >Anda wajib menandatangani lembar pengantaran ketika pesanan
+                    Anda diantarkan untuk mengkonfirmasi bahwa pengantaran
+                    produk telah berhasil. Jika Anda menolak untuk memberikan
+                    tanda tangan, Anda akan dianggap menolak produk pesanan yang
+                    diantarkan ke lokasi yang Anda berikan.&nbsp;</span
+                  >
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span
+                    >Pihak pengiriman pesanan tidak diperkenankan untuk
+                    membongkar kemasan atau merakit produk sebagai layanan
+                    pengantaran.</span
+                  >
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span
+                    >Produk yang telah sampai dan telah ditandatangani akan sah
+                    menjadi milik dan tanggung jawab Anda. Jasmine Furniture
+                    tidak lagi bertanggung jawab atas setiap kerusakan atau
+                    kehilangan produk.</span
+                  >
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span
+                    >Jika Anda berhalangan untuk menerima pesanan produk, Anda
+                    wajib menunjuk seorang perwakilan atas nama Anda yang
+                    merupakan seorang dewasa yang mampu bertanggung jawab dan
+                    menerima produk. Anda setuju bahwa kami berhak mengikuti
+                    petunjuk perwakilan Anda seolah-olah perwakilan Anda adalah
+                    Anda sendiri.</span
+                  >
+                </p>
+              </li>
+            </ul>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture akan berusaha mengantarkan produk ke lokasi
+                  yang Anda berikan dengan perusahaan pengantaran rekan Melody
+                  Furniture. Maka dari itu, Anda diharapkan untuk memberikan
+                  alamat pengantaran secara detail dan lengkap, serta memastikan
+                  bahwa semua tangga dan lift dapat dijangkau.&nbsp;</span
+                >
+              </p>
+            </li>
+            <ul>
+              <li>
+                <p>
+                  <span
+                    >Bila Jasmine Furniture mempertimbangkan bahwa pengantaran
+                    pesanan tampaknya dapat mengakibatkan kerusakan pada produk
+                    ataupun properti Anda, Jasmine Furniture akan
+                    menginformasikan dan mencatatnya dalam pembar pengantaran
+                    produk yang akan Anda tanda tangani nantinya sebagai bentuk
+                    persetujuan bahwa Anda telah mengetahui informasi tersebut.
+                    Anda dapat meminta untuk tetap mengantarkan barang pesanan,
+                    namun Jasmine Furniture tidak bertanggung jawab atas
+                    kerusakan yang timbul atas permintaan Anda.</span
+                  >
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span
+                    >Ketika pesanan diantarkan, Anda wajib memeriksa kondisi dan
+                    nomor kemasan yang diantarkan. Jika terdapat kerusakan,
+                    kehilangan, atau kesalahan, Anda harus mencatatnya dalam
+                    lembar pengantaran produk. Produk yang hilang akan dipesan
+                    kembali 10.4.4</span
+                  >
+                </p>
+              </li>
+            </ul>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture bekerja sama dengan AAAAA sebagai pihak
+                  ketiga yang dipercaya untuk mengantarkan produk ke lokasi yang
+                  Anda inginkan.</span
+                >
+              </p>
+            </li>
+          </ul>
+          <p>
+            <b><br /></b>
+          </p>
+          <h4>Ketentuan Umum Terkait Anda dengan Jasmine Furniture</h4>
+          <h2>Tentang Jasmine Furniture</h2>
+          <p>
+            Jasmine Furniture adalah merk dagang terdaftar resmi dari PT Gatra
+            Mapan yang merupakan Industri Manufaktur Furnitur Berkualitas
+            Tinggi, fokus dan misi kami adalah menghadirkan furnitur di setiap
+            ruangan. Kami membangun produk kami dengan bahan terbaik dan
+            teknologi canggih untuk memastikan pelanggan kami senang.
+          </p>
+          <p>
+            Kami berkomitmen untuk menghasilkan produk berkualitas tinggi bagi
+            pelanggan kami dengan harga yang kompetitif, filosofi operasi
+            perusahaan kami adalah untuk menghadirkan furnitur di setiap
+            ruangan.
+          </p>
+          <p>
+            Kompetensi inti kami adalah kemampuan untuk mengembangkan produk dan
+            layanan kami dengan biaya terendah, sekaligus mencapai kualitas
+            tertinggi. Kami berkomitmen untuk membangun loyalitas pelanggan dan
+            menciptakan hubungan jangka panjang dengan pelanggan kami.
+          </p>
+          <p>&nbsp;</p>
+          <h4>Kewajiban Jasmine Furniture</h4>
+          <p>
+            <b><br /></b>
+          </p>
+          <ul>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture berkewajiban untuk tidak akan melebihkan
+                  harga yang dibayarkan untuk produk yang Anda beli melalui
+                  Belanja Online, serta menjaga produk pesanan Anda hingga
+                  sampai ke lokasi yang Anda pilih.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture tidak bertanggung jawab atas hilangnya
+                  pendapatan, laba, tabungan, jasa maupun peluang bisnis, untuk
+                  setiap reputasi yang rusak atau untuk setiap kerugian yang
+                  tidak wajar oleh kedua belah pihak pada saat pesanan Anda
+                  diterima.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture tidak bertanggung jawab atas kerugian yang
+                  Anda atau pihak ketiga alami jika kerugian tersebut
+                  diakibatkan oleh keadaan memaksa, kesalahan, kelalaian Anda,
+                  penyalahgunaan akun oleh pemilik akun atau pihak lain,
+                  pengunggah yang dengan sengaja memasukkan informasi yang tidak
+                  benar dan/atau melanggar hukum.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Saat Anda membeli sebagai pelanggan, Ketentuan Pembelian dan
+                  Kebijakan Pengembalian tidak akan mempengaruhi hak Anda di
+                  bawah hukum yang tidak dapat ditolak.&nbsp;</span
+                >
+              </p>
+            </li>
+          </ul>
+          <h4>Garansi</h4>
+          <p>
+            Produk dan jasa Jasmine Furniture disediakan tanpa adanya garansi
+            yang berlaku. Jasmine Furniture tidak menjamin bahwa
+          </p>
+          <ul>
+            <li>
+              <p><span>Produk dan jasa bebas dari error (error free);</span></p>
+            </li>
+            <li>
+              <p><span>Kerusakan akan dikoreksi;</span></p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Server bebas dari virus atau komponen berbahaya
+                  lainnya;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Jasmine Furniture akan memenuhi harapan dan/atau kebutuhan
+                  Anda;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Kualitas produk, jasa, website, informasi, instruksi,
+                  dan/atau syarat dan ketentuan akan memenuhi ekspektasi Anda
+                  atau bebas dari error</span
+                >
+              </p>
+            </li>
+          </ul>
+          <h4>Kejadian di Luar Kendali Jasmine Furniture</h4>
+          <p>
+            Jasmine Furniture tidak bertanggung jawab atas keterlambatan atau
+            kegagalan dalam mematuhi Ketentuan Pembelian atau Kebijakan
+            Pengembalian jika penyebabnya ditimbulkan oleh kejadian-kejadian
+            yang berada di luar kendali Jasmine Furniture. Beberapa kejadian
+            tersebut adalah (namun tidak hanya terbatas pada) kebakaran, banjir,
+            gempa bumi, badai, bencana alam, perang, kerusuhan, tindak terorisme
+            atau kerusakan berbahaya atau pengrusakan terhadap lokasi kami,
+            perlengkapan atau produk.
+          </p>
+          <h4>Pembebasan</h4>
+          <p>
+            Jika Anda telah melanggar Ketentuan Pembelian atau Kebijakan
+            Pengembalian Jasmine Furniture, namun Jasmine Furniture tidak
+            mengambil tindakan, maka Melody Furniture masih berhak menggunakan
+            hak dan memperbaiki dalam waktu dan kondisi lain saat Anda melanggar
+            Ketentuan Pembelian atau Kebijakan Pengembalian.&nbsp;
+          </p>
+          <h4>Ketidakabsahan</h4>
+          <p>
+            Jika terdapat satu atau lebih ketentuan dalam Ketentuan Pembelian
+            yang telah ditetapkan Jasmine Furniture dianggap tidak sah oleh
+            pejabat berwenang atau perundang-undangan yang berlaku di Indonesia,
+            maka ketentuan lainnya masih dianggap berlaku dan Anda tetap terikat
+            dengan ketentuan tersebut.&nbsp;
+          </p>
+          <h4>Privasi</h4>
+          <p>
+            Segala informasi pribadi yang telah Anda berikan kepada Jasmine
+            Furniture selama proses pemesanan akan disimpan dan digunakan sesuai
+            dengan Kebijakan Privasi Jasmine Furniture.&nbsp;
+          </p>
+          <h4>Kecakapan dalam Melakukan Belanja Online</h4>
+          <p>
+            Transaksi hanya dapat dilakukan jika Anda berusia 18 tahun atau
+            lebih dan cakap dalam melakukan tindakan hukum. Jika terdapat
+            transaksi yang Anda lakukan yang tidak memenuhi kualifikasi
+            tersebut, maka Anda telah memastikan dan menjamin bahwa transaksi
+            yang Anda lakukan telah diawasi dan disetujui oleh orang tua atau
+            wali Anda. Kami tidak bertanggung jawab atas terjadinya transaksi
+            dan kerugian yang Anda atau pihak ketiga alami akibat transaksi
+            dan/atau penggunaan akun yang dibuat berdasarkan data dan informasi
+            yang tidak benar.
+          </p>
+          <h4>
+            Informasi Mengenai Jasmine Furniture dan Cara Menghubungi Kami
+          </h4>
+          <p>
+            Jika memiliki pertanyaan atau keluhan, Anda dapat menghubungi
+            Jasmine Furniture dengan menelepon Pusat Layanan Pelanggan di
+            08xxxxx atau dengan mengirimkan email ke
+            <a
+              style="color: var(--hijau)"
+              class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              href="mailto:info@jasminefurniture.co.id"
+              ><span>gatra.ecommerce@gmail.com</span></a
+            ><span>
+              yang dapat Anda temukan di pojok kanan bawah laman
+              melodyfurniture.com .</span
+            >
+          </p>
+          <h4>Pengembalian Produk</h4>
+          <p></p>
+          <ul>
+            <li>
+              <p>
+                <span
+                  >Anda dapat memeriksa kondisi produk (kuantitas, referensi,
+                  fitur, kondisi, dan lain-lain) untuk kerusakan, barang yang
+                  hilang, cacat, atau ketidaksesuaian lainnya, sebelum
+                  menandatangani pengiriman. Barang yang Anda terima telah
+                  dipastikan dalam keadaan baik sebelum dikirimkan. Cacat rusak
+                  dalam perjalanan bukanlah tanggung jawab Jasmine
+                  Furniture.&nbsp;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Anda harus melaporkan cacat yang terlihat atau
+                  ketidaksesuaian produk dalam tiga (3) hari kerja setelah
+                  pengiriman.&nbsp;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p><span>Agar klaim Anda sah, Anda harus</span></p>
+            </li>
+            <ul>
+              <li>
+                <p>
+                  <span>Mengirimkan klaim melalui email ke </span
+                  ><a
+                    style="color: var(--hijau)"
+                    class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                    href="mailto:gatra.ecommerce@gmail.com"
+                    ><span>gatra.ecommerce@gmail.com</span></a
+                  ><span>
+                    . Email anda harus mencantumkan nomor seri pemesanan Anda
+                    dan melampirkan berbagai foto dan video yang jelas dari
+                    produk yang rusak.&nbsp;</span
+                  >
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span
+                    >Anda harus mampu menyediakan bukti bahwa klaim tersebut
+                    benar dan mengizinkan Jasmine Furniture, pengirimnya, atau
+                    orang lain yang diberi wewenang untuk memeriksa barang
+                    tersebut. Anda tidak boleh mengintervensi atau mengizinkan
+                    pihak ketiga untuk mengintervensi.&nbsp;</span
+                  >
+                </p>
+              </li>
+            </ul>
+            <li>
+              <p>
+                <span
+                  >Jika klaim Anda diterima, Melody Furniture akan menukar
+                  produk yang rusak atau mengembalikan uang Anda jika produk
+                  tidak lagi tersedia. Produk yang dikembalikan harus diserahkan
+                  pada pengirim dalam kondisi sempurna, dalam kemasan aslinya,
+                  dan dengan semua aksesorisnya. Tidak ada pengembalian yang
+                  akan diterima tanpa persetujuan lebih awal dari Jasmine
+                  Furniture.&nbsp;</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Transaksi dengan fasilitas cicilan tidak dapat dikembalikan
+                  atau dibatalkan.</span
+                >
+              </p>
+            </li>
+            <li>
+              <p>
+                <span
+                  >Transaksi dengan kartu kredit bisa dikembalikan atau
+                  dibatalkan, sesuai dengan potongan tarif bank yang
+                  berlaku.&nbsp;</span
+                >
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer baru -->
+    <footer class="footer footer-transparent d-print-non">
+      <div class="container">
+        <div class="row pt-5">
+          <div class="col-12 col-md-4 mb-3">
+            <div class="fw-700 fs-3 mb-2">Metode Pembayaran</div>
+            <div class="footer__partner__payment">
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/bca.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/bni.webp" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/bri.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/mandiri.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/permatabank.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/dob.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/klikbca.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/klikpay.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/mastercard.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/visa.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/jcb.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/amex.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/qris.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/shopeepay.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/gopay.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/alfamart.png" />
+              </div>
+              <div class="footer__partner__img">
+                <img src="/assets/img/pembayaran/indomaret.png" />
+              </div>
+            </div>
+          </div>
+          <div class="col-8 col-md-3 mb-3">
+            <div class="fw-700 fs-3 mb-2">Jasmine Furniture</div>
+            <ul class="footer__left-menu">
+              <li><a href="/">Beranda</a></li>
+              <li><a href="/produk.html">Produk</a></li>
+              <li><a href="/tentang.html">Tentang</a></li>
+              <li><a href="/kontakkami.html">Kontak</a></li>
+              <li><a href="/kebijakanprivasi.html">Kebijakan Privasi</a></li>
+              <li>
+                <a href="/syaratdanketentuan.html">Syarat dan Ketentuan</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4 col-md-2 mb-3">
+            <div class="fw-700 fs-3 mb-2">Kategori</div>
+            <ul class="footer__left-menu">
+              <li><a href="/produk.html?kategori=lemari">Lemari</a></li>
+              <li><a href="/produk.html?kategori=meja">Meja</a></li>
+              <li><a href="/produk.html?kategori=rak">Rak</a></li>
+              <li><a href="/produk.html?kategori=kursi">Kursi</a></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-3">
+            <div class="footer__service-customer">
+              <div class="mb-1">
+                <strong class="title">Kami siap melayani anda</strong>
+              </div>
+              <p class="mb-1" style="color: #555">
+                Mulai pukul 08.00 - 16.00 WIB<br />( Hari Senin - Sabtu )
+              </p>
+              <p class="mb-1" style="color: #555">
+                <span class="me-1"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                    ></path></svg></span
+                >Commingsoon
+              </p>
+              <p class="mb-1" style="color: #555">
+                <span class="me-1"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <polyline points="3 7 12 13 21 7"></polyline></svg></span
+                >info@jasminefurniture.co.id
+              </p>
+
+              <p class="mb-1" style="color: #555">
+                <a href="https://www.instagram.com/" target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="#555"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line></svg
+                ></a>
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="#555"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+                    ></path></svg
+                ></a>
+                <a href="https://www.instagram.com/" target="_blank"
+                  ><svg
+                    fill="#555"
+                    stroke-linecap="round"
+                    stroke-width="12"
+                    stroke="#555"
+                    width="24"
+                    height="24"
+                    stroke-linejoin="round"
+                    viewBox="0 0 256 256"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M224,80a52.059,52.059,0,0,1-52-52,4.0002,4.0002,0,0,0-4-4H128a4.0002,4.0002,0,0,0-4,4V156a24,24,0,1,1-34.28418-21.69238,3.99957,3.99957,0,0,0,2.28369-3.61279L92,89.05569a3.99948,3.99948,0,0,0-4.70117-3.938A72.00522,72.00522,0,1,0,172,156l-.00049-42.56348A99.27749,99.27749,0,0,0,224,128a4.0002,4.0002,0,0,0,4-4V84A4.0002,4.0002,0,0,0,224,80Zm-4,39.915a91.24721,91.24721,0,0,1-49.66455-17.1792,4.00019,4.00019,0,0,0-6.33594,3.24707L164,156A64,64,0,1,1,84,94.01223l-.00049,34.271A32.00156,32.00156,0,1,0,132,156V32h32.13184A60.09757,60.09757,0,0,0,220,87.86819Z"
+                    /></svg
+                ></a>
+              </p>
+              <!-- <div class="mt-2" style="color: #555">
+                <a
+                  href="https://melodyfurniture.co.id/click-to-whatsapp"
+                  target="_blank"
+                  ><img
+                    src="https://melodyfurniture.co.id/assets/v2/img/icons/chat-whatsapp.png"
+                    class="wa-click"
+                /></a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="text-muted">
+          <div class="d-block text-center">
+            <div class="mt-4 mb-3 p-2 pe-0 ps-0">
+              <span class="fw-700 mr-2">Pembayaran dilindungi</span>:
+              <a href="https://midtrans.com" target="_blank"
+                ><img
+                  src="https://melodyfurniture.co.id/assets/v2/img/payments/midtrans_logo3.png"
+                  style="width: 140px"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container py-3 border-top border-secondary">
+        <p class="text-center mb-2">
+          <small
+            >Hak Cipta © by Creative Jasmine Furniture ® All Right
+            Reserved</small
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- end footer baru -->
+
+    <!-- JavaScript Opsional; Pilih salah satu dari dua berikut! -->
+
+    <!-- JS AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="js/script.js"></script>
+    <script src="js/kontak.js"></script>
+
+    <!-- Pilihan 1: Bootstrap Bundle dengan Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Pilihan 2: Popper dan Bootstrap JS Terpisah -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
